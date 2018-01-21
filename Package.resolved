@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Preprocessing",
+        "repositoryURL": "https://github.com/evilgix/Preprocessing",
+        "state": {
+          "branch": null,
+          "revision": "08257baea566a6c3d3cbae54df8e40d3c0f9b375",
+          "version": "1.0.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
