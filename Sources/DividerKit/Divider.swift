@@ -13,7 +13,7 @@ import Preprocessing
 
 public struct Divider {
     
-    public static func `do`(originalImagePath: String, dividedImagePath: String, labels: [String], divideSize: CGSize = CGSize(width: 28, height: 28)) throws {
+    public static func `do`(originalImagePath: String, dividedImagePath: String, labels: [String], divideSize: CGSize = CGSize(width: 227, height: 227)) throws {
         
         func imageURL(_ offset: Int) -> URL {
             return URL(fileURLWithPath: originalImagePath, isDirectory: true).appendingPathComponent("\(offset).png")
@@ -41,7 +41,7 @@ public struct Divider {
         paths.enumerated().forEach { offset, _ in
             if let ciimage = CIImage(contentsOf: imageURL(offset)) {
                 let processedImage = Processor.`do`(image: ciimage)
-                let divideResult = Processor.divide(image: processedImage, size: divideSize)
+                let divideResult = Processor.divide(image: processedImage, size: divideSize, adaptiveThreshold: false)
                 guard divideResult.count == labels.count else {
                     print("[warning] result invidate. offset: ==> \(offset)")
                     return;

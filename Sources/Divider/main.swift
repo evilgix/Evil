@@ -19,7 +19,7 @@ import DividerKit
 var imageRoot = FileManager.default.currentDirectoryPath
 var labels = [String]()
 
-var size = CGSize(width: 28, height: 28)
+var size = CGSize(width: 227, height: 227)
 
 for argument in CommandLine.arguments {
     let args = argument.split(separator: "=")
