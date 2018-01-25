@@ -5,26 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "Evil",
-    dependencies: [
-        .package(url: "https://github.com/evilgix/Preprocessing", from: "1.0.7")
-    ],
+    products: [
+        .library(
+            name: "Evil",
+            targets: ["Evil-macOS"]),
+        ],
     targets: [
         .target(
-            name: "Evil",
-            dependencies: [
-                "DividerKit"
-            ]
-        ),
-        .target(
-            name: "DividerKit",
-            dependencies: [
-                "Preprocessing"
-            ]
-        ),
-        .target(
-            name: "Divider",
-            dependencies: [
-                "DividerKit"
-        ]),
-    ]
+            name: "Evil-macOS",
+            dependencies: [],
+            path: "Source"),
+        ]
 )

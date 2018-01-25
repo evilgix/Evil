@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import DividerKit
 
 func launch(pyton currentDirectoryPath: String, arguments: [String]) -> String? {
     

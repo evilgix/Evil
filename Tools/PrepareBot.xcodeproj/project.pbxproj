@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A80B86A2019C05A00350373 /* DividerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8682019C05A00350373 /* DividerError.swift */; };
+		0A80B86B2019C05A00350373 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8692019C05A00350373 /* Divider.swift */; };
+		0A80CF932019C0D800350373 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80CF922019C0D800350373 /* main.swift */; };
+		0AE2245B2019C43A00AA8866 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224552019C43A00AA8866 /* NSImage.swift */; };
+		0AE2245C2019C43A00AA8866 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224562019C43A00AA8866 /* Error.swift */; };
+		0AE2245D2019C43A00AA8866 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224572019C43A00AA8866 /* Processor.swift */; };
+		0AE2245E2019C43A00AA8866 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224582019C43A00AA8866 /* AdaptiveThresholdFilter.swift */; };
+		0AE2245F2019C43A00AA8866 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224592019C43A00AA8866 /* Utils.swift */; };
+		0AE224602019C43A00AA8866 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2245A2019C43A00AA8866 /* SmoothThresholdFilter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A80CFF22019C3E700350373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFED2019C3E700350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80B8072019BCA300350373;
+			remoteInfo = "Evil macOS";
+		};
+		0A80CFF42019C3E700350373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFED2019C3E700350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80CFD82019C21F00350373;
+			remoteInfo = Evil;
+		};
+		0A80CFFB2019C3EB00350373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFF62019C3EB00350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80B8072019BCA300350373;
+			remoteInfo = "Evil macOS";
+		};
+		0A80CFFD2019C3EB00350373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFF62019C3EB00350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80CFD82019C21F00350373;
+			remoteInfo = Evil;
+		};
+		0A80D0042019C3F700350373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFFF2019C3F700350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80B8072019BCA300350373;
+			remoteInfo = "Evil macOS";
+		};
+		0A80D0062019C3F700350373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFFF2019C3F700350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80CFD82019C21F00350373;
+			remoteInfo = Evil;
+		};
+		0AE2244A2019C40700AA8866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AE224452019C40700AA8866 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80B8072019BCA300350373;
+			remoteInfo = "Evil macOS";
+		};
+		0AE2244C2019C40700AA8866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AE224452019C40700AA8866 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80CFD82019C21F00350373;
+			remoteInfo = Evil;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A80B84E2019BFB700350373 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A80B8502019BFB700350373 /* PrepareBot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PrepareBot; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A80B8682019C05A00350373 /* DividerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerError.swift; sourceTree = "<group>"; };
+		0A80B8692019C05A00350373 /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		0A80CF912019C0BC00350373 /* generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = generator.py; path = Scripts/generator.py; sourceTree = "<group>"; };
+		0A80CF922019C0D800350373 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0A80CFED2019C3E700350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0A80CFF62019C3EB00350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0A80CFFF2019C3F700350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0AE224452019C40700AA8866 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0AE224552019C43A00AA8866 /* NSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = ../../Sources/NSImage.swift; sourceTree = "<group>"; };
+		0AE224562019C43A00AA8866 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../Sources/Error.swift; sourceTree = "<group>"; };
+		0AE224572019C43A00AA8866 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processor.swift; path = ../../Sources/Processor.swift; sourceTree = "<group>"; };
+		0AE224582019C43A00AA8866 /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveThresholdFilter.swift; path = ../../Sources/AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
+		0AE224592019C43A00AA8866 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../Sources/Utils.swift; sourceTree = "<group>"; };
+		0AE2245A2019C43A00AA8866 /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmoothThresholdFilter.swift; path = ../../Sources/SmoothThresholdFilter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A80B84D2019BFB700350373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A80B8472019BFB700350373 = {
+			isa = PBXGroup;
+			children = (
+				0A80B8522019BFB700350373 /* PrepareBot */,
+				0A80B8512019BFB700350373 /* Products */,
+				0A80B8632019BFE500350373 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0A80B8512019BFB700350373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A80B8502019BFB700350373 /* PrepareBot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A80B8522019BFB700350373 /* PrepareBot */ = {
+			isa = PBXGroup;
+			children = (
+				0A80CF922019C0D800350373 /* main.swift */,
+				0AE224542019C42000AA8866 /* Preprocessor */,
+				0A80B8652019C00F00350373 /* Divider */,
+				0A80CF902019C0A900350373 /* Scripts */,
+			);
+			path = PrepareBot;
+			sourceTree = "<group>";
+		};
+		0A80B8632019BFE500350373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AE224452019C40700AA8866 /* Evil.xcodeproj */,
+				0A80CFFF2019C3F700350373 /* Evil.xcodeproj */,
+				0A80CFF62019C3EB00350373 /* Evil.xcodeproj */,
+				0A80CFED2019C3E700350373 /* Evil.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A80B8652019C00F00350373 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				0A80B8692019C05A00350373 /* Divider.swift */,
+				0A80B8682019C05A00350373 /* DividerError.swift */,
+			);
+			name = Divider;
+			sourceTree = "<group>";
+		};
+		0A80CF902019C0A900350373 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0A80CF912019C0BC00350373 /* generator.py */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		0A80CFEE2019C3E700350373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A80CFF32019C3E700350373 /* Evil_macOS.framework */,
+				0A80CFF52019C3E700350373 /* Evil.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A80CFF72019C3EB00350373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A80CFFC2019C3EB00350373 /* Evil_macOS.framework */,
+				0A80CFFE2019C3EB00350373 /* Evil.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A80D0002019C3F700350373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A80D0052019C3F700350373 /* Evil_macOS.framework */,
+				0A80D0072019C3F700350373 /* Evil.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AE224462019C40700AA8866 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AE2244B2019C40700AA8866 /* Evil_macOS.framework */,
+				0AE2244D2019C40700AA8866 /* Evil.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AE224542019C42000AA8866 /* Preprocessor */ = {
+			isa = PBXGroup;
+			children = (
+				0AE224572019C43A00AA8866 /* Processor.swift */,
+				0AE224562019C43A00AA8866 /* Error.swift */,
+				0AE224552019C43A00AA8866 /* NSImage.swift */,
+				0AE224592019C43A00AA8866 /* Utils.swift */,
+				0AE224612019C43E00AA8866 /* Filters */,
+			);
+			name = Preprocessor;
+			sourceTree = "<group>";
+		};
+		0AE224612019C43E00AA8866 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				0AE224582019C43A00AA8866 /* AdaptiveThresholdFilter.swift */,
+				0AE2245A2019C43A00AA8866 /* SmoothThresholdFilter.swift */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A80B84F2019BFB700350373 /* PrepareBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A80B8572019BFB700350373 /* Build configuration list for PBXNativeTarget "PrepareBot" */;
+			buildPhases = (
+				0A80B84C2019BFB700350373 /* Sources */,
+				0A80B84D2019BFB700350373 /* Frameworks */,
+				0A80B84E2019BFB700350373 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrepareBot;
+			productName = PrepareBot;
+			productReference = 0A80B8502019BFB700350373 /* PrepareBot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A80B8482019BFB700350373 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Gix;
+				TargetAttributes = {
+					0A80B84F2019BFB700350373 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0A80B84B2019BFB700350373 /* Build configuration list for PBXProject "PrepareBot" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A80B8472019BFB700350373;
+			productRefGroup = 0A80B8512019BFB700350373 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0AE224462019C40700AA8866 /* Products */;
+					ProjectRef = 0AE224452019C40700AA8866 /* Evil.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A80CFF72019C3EB00350373 /* Products */;
+					ProjectRef = 0A80CFF62019C3EB00350373 /* Evil.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A80CFEE2019C3E700350373 /* Products */;
+					ProjectRef = 0A80CFED2019C3E700350373 /* Evil.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A80D0002019C3F700350373 /* Products */;
+					ProjectRef = 0A80CFFF2019C3F700350373 /* Evil.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				0A80B84F2019BFB700350373 /* PrepareBot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0A80CFF32019C3E700350373 /* Evil_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil_macOS.framework;
+			remoteRef = 0A80CFF22019C3E700350373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A80CFF52019C3E700350373 /* Evil.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil.framework;
+			remoteRef = 0A80CFF42019C3E700350373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A80CFFC2019C3EB00350373 /* Evil_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil_macOS.framework;
+			remoteRef = 0A80CFFB2019C3EB00350373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A80CFFE2019C3EB00350373 /* Evil.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil.framework;
+			remoteRef = 0A80CFFD2019C3EB00350373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A80D0052019C3F700350373 /* Evil_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil_macOS.framework;
+			remoteRef = 0A80D0042019C3F700350373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A80D0072019C3F700350373 /* Evil.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil.framework;
+			remoteRef = 0A80D0062019C3F700350373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AE2244B2019C40700AA8866 /* Evil_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil_macOS.framework;
+			remoteRef = 0AE2244A2019C40700AA8866 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AE2244D2019C40700AA8866 /* Evil.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Evil.framework;
+			remoteRef = 0AE2244C2019C40700AA8866 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A80B84C2019BFB700350373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AE2245D2019C43A00AA8866 /* Processor.swift in Sources */,
+				0AE224602019C43A00AA8866 /* SmoothThresholdFilter.swift in Sources */,
+				0AE2245B2019C43A00AA8866 /* NSImage.swift in Sources */,
+				0A80B86B2019C05A00350373 /* Divider.swift in Sources */,
+				0A80B86A2019C05A00350373 /* DividerError.swift in Sources */,
+				0AE2245C2019C43A00AA8866 /* Error.swift in Sources */,
+				0A80CF932019C0D800350373 /* main.swift in Sources */,
+				0AE2245E2019C43A00AA8866 /* AdaptiveThresholdFilter.swift in Sources */,
+				0AE2245F2019C43A00AA8866 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A80B8552019BFB700350373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A80B8562019BFB700350373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		0A80B8582019BFB700350373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU764FA74Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		0A80B8592019BFB700350373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU764FA74Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A80B84B2019BFB700350373 /* Build configuration list for PBXProject "PrepareBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A80B8552019BFB700350373 /* Debug */,
+				0A80B8562019BFB700350373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A80B8572019BFB700350373 /* Build configuration list for PBXNativeTarget "PrepareBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A80B8582019BFB700350373 /* Debug */,
+				0A80B8592019BFB700350373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A80B8482019BFB700350373 /* Project object */;
+}
