@@ -43,6 +43,7 @@
 		0A80B8282019BD4A00350373 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A80CFD82019C21F00350373 /* Evil_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Evil_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEBF9DA2019C66700301CED /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		0AEBF9E12019CF3A00301CED /* Evil.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Evil.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 		0AEBF9D92019C65B00301CED /* Deployment */ = {
 			isa = PBXGroup;
 			children = (
+				0AEBF9E12019CF3A00301CED /* Evil.podspec */,
 				0AEBF9DA2019C66700301CED /* Package.swift */,
 			);
 			name = Deployment;
