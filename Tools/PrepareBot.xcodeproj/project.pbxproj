@@ -10,12 +10,12 @@
 		0A80B86A2019C05A00350373 /* DividerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8682019C05A00350373 /* DividerError.swift */; };
 		0A80B86B2019C05A00350373 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8692019C05A00350373 /* Divider.swift */; };
 		0A80CF932019C0D800350373 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80CF922019C0D800350373 /* main.swift */; };
-		0AE2245B2019C43A00AA8866 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224552019C43A00AA8866 /* NSImage.swift */; };
-		0AE2245C2019C43A00AA8866 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224562019C43A00AA8866 /* Error.swift */; };
-		0AE2245D2019C43A00AA8866 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224572019C43A00AA8866 /* Processor.swift */; };
-		0AE2245E2019C43A00AA8866 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224582019C43A00AA8866 /* AdaptiveThresholdFilter.swift */; };
-		0AE2245F2019C43A00AA8866 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE224592019C43A00AA8866 /* Utils.swift */; };
-		0AE224602019C43A00AA8866 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2245A2019C43A00AA8866 /* SmoothThresholdFilter.swift */; };
+		0AEBF9FC2019D78E00301CED /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FA2019D78E00301CED /* AdaptiveThresholdFilter.swift */; };
+		0AEBF9FD2019D78E00301CED /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FB2019D78E00301CED /* SmoothThresholdFilter.swift */; };
+		0AEBFA022019D79D00301CED /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FE2019D79D00301CED /* Processor.swift */; };
+		0AEBFA032019D79D00301CED /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FF2019D79D00301CED /* Error.swift */; };
+		0AEBFA042019D79D00301CED /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBFA002019D79D00301CED /* NSImage.swift */; };
+		0AEBFA052019D79D00301CED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBFA012019D79D00301CED /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,12 +99,12 @@
 		0A80CFF62019C3EB00350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
 		0A80CFFF2019C3F700350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
 		0AE224452019C40700AA8866 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
-		0AE224552019C43A00AA8866 /* NSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = ../../Sources/NSImage.swift; sourceTree = "<group>"; };
-		0AE224562019C43A00AA8866 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../Sources/Error.swift; sourceTree = "<group>"; };
-		0AE224572019C43A00AA8866 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processor.swift; path = ../../Sources/Processor.swift; sourceTree = "<group>"; };
-		0AE224582019C43A00AA8866 /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveThresholdFilter.swift; path = ../../Sources/AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
-		0AE224592019C43A00AA8866 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../Sources/Utils.swift; sourceTree = "<group>"; };
-		0AE2245A2019C43A00AA8866 /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmoothThresholdFilter.swift; path = ../../Sources/SmoothThresholdFilter.swift; sourceTree = "<group>"; };
+		0AEBF9FA2019D78E00301CED /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveThresholdFilter.swift; path = ../../Source/AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
+		0AEBF9FB2019D78E00301CED /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmoothThresholdFilter.swift; path = ../../Source/SmoothThresholdFilter.swift; sourceTree = "<group>"; };
+		0AEBF9FE2019D79D00301CED /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processor.swift; path = ../../Source/Processor.swift; sourceTree = "<group>"; };
+		0AEBF9FF2019D79D00301CED /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../Source/Error.swift; sourceTree = "<group>"; };
+		0AEBFA002019D79D00301CED /* NSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = ../../Source/NSImage.swift; sourceTree = "<group>"; };
+		0AEBFA012019D79D00301CED /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../Source/Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +177,8 @@
 		0A80CFEE2019C3E700350373 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A80CFF32019C3E700350373 /* Evil_macOS.framework */,
 				0A80CFF52019C3E700350373 /* Evil.framework */,
+				0A80CFF32019C3E700350373 /* Evil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 		0A80CFF72019C3EB00350373 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A80CFFC2019C3EB00350373 /* Evil_macOS.framework */,
 				0A80CFFE2019C3EB00350373 /* Evil.framework */,
+				0A80CFFC2019C3EB00350373 /* Evil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,8 +195,8 @@
 		0A80D0002019C3F700350373 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A80D0052019C3F700350373 /* Evil_macOS.framework */,
 				0A80D0072019C3F700350373 /* Evil.framework */,
+				0A80D0052019C3F700350373 /* Evil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,8 +204,8 @@
 		0AE224462019C40700AA8866 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AE2244B2019C40700AA8866 /* Evil_macOS.framework */,
 				0AE2244D2019C40700AA8866 /* Evil.framework */,
+				0AE2244B2019C40700AA8866 /* Evil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,10 +213,10 @@
 		0AE224542019C42000AA8866 /* Preprocessor */ = {
 			isa = PBXGroup;
 			children = (
-				0AE224572019C43A00AA8866 /* Processor.swift */,
-				0AE224562019C43A00AA8866 /* Error.swift */,
-				0AE224552019C43A00AA8866 /* NSImage.swift */,
-				0AE224592019C43A00AA8866 /* Utils.swift */,
+				0AEBF9FE2019D79D00301CED /* Processor.swift */,
+				0AEBF9FF2019D79D00301CED /* Error.swift */,
+				0AEBFA002019D79D00301CED /* NSImage.swift */,
+				0AEBFA012019D79D00301CED /* Utils.swift */,
 				0AE224612019C43E00AA8866 /* Filters */,
 			);
 			name = Preprocessor;
@@ -225,8 +225,8 @@
 		0AE224612019C43E00AA8866 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				0AE224582019C43A00AA8866 /* AdaptiveThresholdFilter.swift */,
-				0AE2245A2019C43A00AA8866 /* SmoothThresholdFilter.swift */,
+				0AEBF9FA2019D78E00301CED /* AdaptiveThresholdFilter.swift */,
+				0AEBF9FB2019D78E00301CED /* SmoothThresholdFilter.swift */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -303,10 +303,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0A80CFF32019C3E700350373 /* Evil_macOS.framework */ = {
+		0A80CFF32019C3E700350373 /* Evil.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil_macOS.framework;
+			path = Evil.framework;
 			remoteRef = 0A80CFF22019C3E700350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -317,10 +317,10 @@
 			remoteRef = 0A80CFF42019C3E700350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0A80CFFC2019C3EB00350373 /* Evil_macOS.framework */ = {
+		0A80CFFC2019C3EB00350373 /* Evil.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil_macOS.framework;
+			path = Evil.framework;
 			remoteRef = 0A80CFFB2019C3EB00350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -331,10 +331,10 @@
 			remoteRef = 0A80CFFD2019C3EB00350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0A80D0052019C3F700350373 /* Evil_macOS.framework */ = {
+		0A80D0052019C3F700350373 /* Evil.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil_macOS.framework;
+			path = Evil.framework;
 			remoteRef = 0A80D0042019C3F700350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -345,10 +345,10 @@
 			remoteRef = 0A80D0062019C3F700350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0AE2244B2019C40700AA8866 /* Evil_macOS.framework */ = {
+		0AE2244B2019C40700AA8866 /* Evil.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil_macOS.framework;
+			path = Evil.framework;
 			remoteRef = 0AE2244A2019C40700AA8866 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -366,15 +366,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE2245D2019C43A00AA8866 /* Processor.swift in Sources */,
-				0AE224602019C43A00AA8866 /* SmoothThresholdFilter.swift in Sources */,
-				0AE2245B2019C43A00AA8866 /* NSImage.swift in Sources */,
+				0AEBFA022019D79D00301CED /* Processor.swift in Sources */,
 				0A80B86B2019C05A00350373 /* Divider.swift in Sources */,
+				0AEBFA052019D79D00301CED /* Utils.swift in Sources */,
+				0AEBF9FC2019D78E00301CED /* AdaptiveThresholdFilter.swift in Sources */,
 				0A80B86A2019C05A00350373 /* DividerError.swift in Sources */,
-				0AE2245C2019C43A00AA8866 /* Error.swift in Sources */,
+				0AEBFA042019D79D00301CED /* NSImage.swift in Sources */,
+				0AEBF9FD2019D78E00301CED /* SmoothThresholdFilter.swift in Sources */,
+				0AEBFA032019D79D00301CED /* Error.swift in Sources */,
 				0A80CF932019C0D800350373 /* main.swift in Sources */,
-				0AE2245E2019C43A00AA8866 /* AdaptiveThresholdFilter.swift in Sources */,
-				0AE2245F2019C43A00AA8866 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,6 @@
 		0A80CFE62019C28100350373 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8182019BCC800350373 /* UIImage.swift */; };
 		0A80CFE72019C28400350373 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8162019BCC800350373 /* SmoothThresholdFilter.swift */; };
 		0A80CFE82019C28400350373 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81A2019BCC800350373 /* AdaptiveThresholdFilter.swift */; };
-		0AEBF9DB2019C66700301CED /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9DA2019C66700301CED /* Package.swift */; };
 		0AEBF9E92019D3EA00301CED /* ChineseIDCardRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81B2019BCC800350373 /* ChineseIDCardRecognizer.swift */; };
 /* End PBXBuildFile section */
 
@@ -261,7 +260,6 @@
 				0A80B81E2019BCC800350373 /* Processor.swift in Sources */,
 				0A80B8232019BCC800350373 /* AdaptiveThresholdFilter.swift in Sources */,
 				0A80B81D2019BCC800350373 /* Error.swift in Sources */,
-				0AEBF9DB2019C66700301CED /* Package.swift in Sources */,
 				0A80B81C2019BCC800350373 /* Evil.swift in Sources */,
 				0A80B8442019BF4F00350373 /* NSImage.swift in Sources */,
 				0A80B8222019BCC800350373 /* Utils.swift in Sources */,
