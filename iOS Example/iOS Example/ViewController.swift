@@ -13,8 +13,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        try? ChineseIDCard.updateModel()
+        if let recognizer = ChineseIDCardRecognizer.`default` {
+            debugPrint(recognizer)
+        }
     }
 
     override func didReceiveMemoryWarning() {

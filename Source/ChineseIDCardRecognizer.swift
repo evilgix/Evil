@@ -10,19 +10,23 @@ import Foundation
 import CoreGraphics
 
 @available(OSX 10.13, iOS 11.0, *)
-public class ChineseIDCard {
+public class ChineseIDCardRecognizer {
     
-    static let modelName = "ChineseIDCard.mlmodel"
-    static let downloadURL = URL(string: "http://ou5pk1mdu.bkt.clouddn.com/ChineseIDCard.mlmodel")!
+    struct Config {
+        static let modelName = "ChineseIDCard.mlmodel"
+        static let downloadURL = URL(string: "http://ou5pk1mdu.bkt.clouddn.com/ChineseIDCard.mlmodel")!
+    }
     
     let evil: Evil
     
+    public static var `default` = try? ChineseIDCardRecognizer()
+    
     public init(_ autoUpateModel: Bool = true) throws {
-        if let evil = try? Evil(model: ChineseIDCard.modelName) {
+        if let evil = try? Evil(model: Config.modelName) {
             self.evil = evil
         } else {
-            try ChineseIDCard.updateModel()
-            self.evil = try Evil(model: ChineseIDCard.modelName)
+            try ChineseIDCardRecognizer.updateModel()
+            self.evil = try Evil(model: Config.modelName)
         }
     }
     
@@ -31,10 +35,10 @@ public class ChineseIDCard {
     }
     
     public static func updateModel(force: Bool = false) throws {
-        try Evil.update(model: ChineseIDCard.modelName, source: ChineseIDCard.downloadURL, force: force)
+        try Evil.update(model: Config.modelName, source: Config.downloadURL, force: force)
     }
     
-    public func recognize(_ object: Recognizable, placeholder: String = "?") -> String? {
+    public func `do`(_ object: Recognizable, placeholder: String = "?") -> String? {
         if let image = object.croppedMaxRetangle.correctionByFace().process().value?.image {
             // 截取 数字区
             // 按照真实比例截取，身份证号码区

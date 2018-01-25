@@ -12,8 +12,8 @@
 		0A80CFA62019C18300350373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA42019C18300350373 /* Main.storyboard */; };
 		0A80CFA82019C18300350373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA72019C18300350373 /* Assets.xcassets */; };
 		0A80CFAB2019C18300350373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA92019C18300350373 /* LaunchScreen.storyboard */; };
-		0A80CFBB2019C1B400350373 /* Evil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A80CFBA2019C1A000350373 /* Evil.framework */; };
-		0A80CFBC2019C1B400350373 /* Evil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A80CFBA2019C1A000350373 /* Evil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AEBF9ED2019D42400301CED /* Evil_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */; };
+		0AEBF9EE2019D42400301CED /* Evil_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,19 +24,26 @@
 			remoteGlobalIDString = 0A80B8072019BCA300350373;
 			remoteInfo = "Evil macOS";
 		};
-		0A80CFB92019C1A000350373 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A80CFB22019C1A000350373 /* Evil.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A80B8342019BDFC00350373;
-			remoteInfo = Evil;
-		};
 		0A80CFBD2019C1B400350373 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A80CFB22019C1A000350373 /* Evil.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 0A80CFD72019C21F00350373;
 			remoteInfo = Evil;
+		};
+		0AEBF9EB2019D41C00301CED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFB22019C1A000350373 /* Evil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A80CFD82019C21F00350373;
+			remoteInfo = "Evil iOS";
+		};
+		0AEBF9EF2019D42400301CED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A80CFB22019C1A000350373 /* Evil.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A80CFD72019C21F00350373;
+			remoteInfo = "Evil iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0A80CFBC2019C1B400350373 /* Evil.framework in Embed Frameworks */,
+				0AEBF9EE2019D42400301CED /* Evil_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A80CFBB2019C1B400350373 /* Evil.framework in Frameworks */,
+				0AEBF9ED2019D42400301CED /* Evil_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0A80CFB82019C1A000350373 /* Evil_macOS.framework */,
-				0A80CFBA2019C1A000350373 /* Evil.framework */,
+				0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +139,7 @@
 			);
 			dependencies = (
 				0A80CFBE2019C1B400350373 /* PBXTargetDependency */,
+				0AEBF9F02019D42400301CED /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = "iOS Example";
@@ -186,11 +194,11 @@
 			remoteRef = 0A80CFB72019C1A000350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0A80CFBA2019C1A000350373 /* Evil.framework */ = {
+		0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil.framework;
-			remoteRef = 0A80CFB92019C1A000350373 /* PBXContainerItemProxy */;
+			path = Evil_iOS.framework;
+			remoteRef = 0AEBF9EB2019D41C00301CED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -225,6 +233,11 @@
 			isa = PBXTargetDependency;
 			name = Evil;
 			targetProxy = 0A80CFBD2019C1B400350373 /* PBXContainerItemProxy */;
+		};
+		0AEBF9F02019D42400301CED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Evil iOS";
+			targetProxy = 0AEBF9EF2019D42400301CED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

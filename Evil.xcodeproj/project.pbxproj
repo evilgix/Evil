@@ -13,12 +13,11 @@
 		0A80B81F2019BCC800350373 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8162019BCC800350373 /* SmoothThresholdFilter.swift */; };
 		0A80B8222019BCC800350373 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8192019BCC800350373 /* Utils.swift */; };
 		0A80B8232019BCC800350373 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81A2019BCC800350373 /* AdaptiveThresholdFilter.swift */; };
-		0A80B8242019BCC800350373 /* ChineseIDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81B2019BCC800350373 /* ChineseIDCard.swift */; };
+		0A80B8242019BCC800350373 /* ChineseIDCardRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81B2019BCC800350373 /* ChineseIDCardRecognizer.swift */; };
 		0A80B8272019BD1E00350373 /* Evil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A80B8262019BD0B00350373 /* Evil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A80B8442019BF4F00350373 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8172019BCC800350373 /* NSImage.swift */; };
 		0A80CFE02019C26500350373 /* Evil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A80B8262019BD0B00350373 /* Evil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A80CFE12019C27C00350373 /* Evil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8132019BCC800350373 /* Evil.swift */; };
-		0A80CFE22019C27C00350373 /* ChineseIDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81B2019BCC800350373 /* ChineseIDCard.swift */; };
 		0A80CFE32019C27C00350373 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8152019BCC800350373 /* Processor.swift */; };
 		0A80CFE42019C27C00350373 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8142019BCC800350373 /* Error.swift */; };
 		0A80CFE52019C27C00350373 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8192019BCC800350373 /* Utils.swift */; };
@@ -26,10 +25,11 @@
 		0A80CFE72019C28400350373 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8162019BCC800350373 /* SmoothThresholdFilter.swift */; };
 		0A80CFE82019C28400350373 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81A2019BCC800350373 /* AdaptiveThresholdFilter.swift */; };
 		0AEBF9DB2019C66700301CED /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9DA2019C66700301CED /* Package.swift */; };
+		0AEBF9E92019D3EA00301CED /* ChineseIDCardRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B81B2019BCC800350373 /* ChineseIDCardRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A80B8072019BCA300350373 /* Evil_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Evil_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A80B8072019BCA300350373 /* Evil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Evil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A80B8132019BCC800350373 /* Evil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evil.swift; sourceTree = "<group>"; };
 		0A80B8142019BCC800350373 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0A80B8152019BCC800350373 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
@@ -38,10 +38,10 @@
 		0A80B8182019BCC800350373 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		0A80B8192019BCC800350373 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0A80B81A2019BCC800350373 /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
-		0A80B81B2019BCC800350373 /* ChineseIDCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseIDCard.swift; sourceTree = "<group>"; };
+		0A80B81B2019BCC800350373 /* ChineseIDCardRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseIDCardRecognizer.swift; sourceTree = "<group>"; };
 		0A80B8262019BD0B00350373 /* Evil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Evil.h; sourceTree = "<group>"; };
 		0A80B8282019BD4A00350373 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A80CFD82019C21F00350373 /* Evil_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Evil_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A80CFD82019C21F00350373 /* Evil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Evil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEBF9DA2019C66700301CED /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		0AEBF9E12019CF3A00301CED /* Evil.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Evil.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,8 +76,8 @@
 		0A80B8082019BCA300350373 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A80B8072019BCA300350373 /* Evil_macOS.framework */,
-				0A80CFD82019C21F00350373 /* Evil_iOS.framework */,
+				0A80B8072019BCA300350373 /* Evil.framework */,
+				0A80CFD82019C21F00350373 /* Evil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				0A80B8132019BCC800350373 /* Evil.swift */,
-				0A80B82E2019BDD000350373 /* Modules */,
+				0A80B82E2019BDD000350373 /* Recognizers */,
 				0A80B82C2019BD7C00350373 /* Preprocessor */,
 				0A80B8252019BCE300350373 /* Supporting Files */,
 			);
@@ -124,12 +124,12 @@
 			name = Filters;
 			sourceTree = "<group>";
 		};
-		0A80B82E2019BDD000350373 /* Modules */ = {
+		0A80B82E2019BDD000350373 /* Recognizers */ = {
 			isa = PBXGroup;
 			children = (
-				0A80B81B2019BCC800350373 /* ChineseIDCard.swift */,
+				0A80B81B2019BCC800350373 /* ChineseIDCardRecognizer.swift */,
 			);
-			name = Modules;
+			name = Recognizers;
 			sourceTree = "<group>";
 		};
 		0AEBF9D92019C65B00301CED /* Deployment */ = {
@@ -178,7 +178,7 @@
 			);
 			name = "Evil macOS";
 			productName = "Evil macOS";
-			productReference = 0A80B8072019BCA300350373 /* Evil_macOS.framework */;
+			productReference = 0A80B8072019BCA300350373 /* Evil.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0A80CFD72019C21F00350373 /* Evil iOS */ = {
@@ -196,7 +196,7 @@
 			);
 			name = "Evil iOS";
 			productName = Evil;
-			productReference = 0A80CFD82019C21F00350373 /* Evil_iOS.framework */;
+			productReference = 0A80CFD82019C21F00350373 /* Evil.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A80B8062019BCA300350373 /* Evil macOS */,
 				0A80CFD72019C21F00350373 /* Evil iOS */,
+				0A80B8062019BCA300350373 /* Evil macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +265,7 @@
 				0A80B81C2019BCC800350373 /* Evil.swift in Sources */,
 				0A80B8442019BF4F00350373 /* NSImage.swift in Sources */,
 				0A80B8222019BCC800350373 /* Utils.swift in Sources */,
-				0A80B8242019BCC800350373 /* ChineseIDCard.swift in Sources */,
+				0A80B8242019BCC800350373 /* ChineseIDCardRecognizer.swift in Sources */,
 				0A80B81F2019BCC800350373 /* SmoothThresholdFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +280,7 @@
 				0A80CFE72019C28400350373 /* SmoothThresholdFilter.swift in Sources */,
 				0A80CFE32019C27C00350373 /* Processor.swift in Sources */,
 				0A80CFE62019C28100350373 /* UIImage.swift in Sources */,
-				0A80CFE22019C27C00350373 /* ChineseIDCard.swift in Sources */,
+				0AEBF9E92019D3EA00301CED /* ChineseIDCardRecognizer.swift in Sources */,
 				0A80CFE12019C27C00350373 /* Evil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,7 +417,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = store.dolores.evil.Evil;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Evil;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
@@ -440,7 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = store.dolores.evil.Evil;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Evil;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
@@ -461,7 +461,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = store.dolores.evil.Evil;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Evil;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -484,7 +484,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = store.dolores.evil.Evil;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Evil;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
