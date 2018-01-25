@@ -18,8 +18,8 @@ public struct Divider {
         func imageURL(_ offset: Int) -> URL {
             return URL(fileURLWithPath: originalImagePath, isDirectory: true).appendingPathComponent("\(offset).png")
         }
-        func singleImageURL(label: Int, idx: Int) -> URL {
-            return URL(fileURLWithPath: dividedImagePath, isDirectory: true).appendingPathComponent("\(labels[label])/\(idx).jpeg")
+        func singleImageURL(label: Int, idx: Int, forTest: Bool) -> URL {
+            return URL(fileURLWithPath: dividedImagePath, isDirectory: true).appendingPathComponent("\(forTest ? "test" : "train")/\(labels[label])/\(idx).png")
         }
         
         let fileManager = FileManager.`default`
@@ -33,25 +33,28 @@ public struct Divider {
         }
         
         try labels.forEach { label in
-            try fileManager.createDirectory(atPath: "\(dividedImagePath)/\(label)", withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(atPath: "\(dividedImagePath)/train/\(label)", withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(atPath: "\(dividedImagePath)/test/\(label)", withIntermediateDirectories: true, attributes: nil)
         }
         
         let context = CIContext(mtlDevice: MTLCreateSystemDefaultDevice()!)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
         
         paths.enumerated().forEach { offset, _ in
             if let ciimage = CIImage(contentsOf: imageURL(offset)) {
-                let processedImage = Processor.`do`(image: ciimage)
-                let divideResult = Processor.divide(image: processedImage, size: divideSize, adaptiveThreshold: false)
+                guard let divideResult = ciimage.preprocessor.process().value?.preprocessor.divideText(result: divideSize).value?.map( { $0.image }) else {
+                    return;
+                }
                 guard divideResult.count == labels.count else {
                     print("[warning] result invidate. offset: ==> \(offset)")
                     return;
                 }
                 
                 let idx = offset
-                divideResult.enumerated().forEach { offset, r in
-                    let url = singleImageURL(label: offset, idx: idx)
+                divideResult.enumerated().forEach { offset, image in
+                    let url = singleImageURL(label: offset, idx: idx, forTest: idx > Int(Float(paths.count) * 0.8))
                     do {
-                        try context.writeJPEGRepresentation(of: r.0, to: url, colorSpace: CGColorSpaceCreateDeviceRGB(), options: [:])
+                        try context.writePNGRepresentation(of: image, to: url, format: kCIFormatRGBA8, colorSpace: colorSpace, options: [:])
                     } catch (let error) {
                         print("[warning] write jepg file failed. \(error.localizedDescription)")
                     }

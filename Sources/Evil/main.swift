@@ -85,4 +85,4 @@ debugPrint("divid original image succeed")
 debugPrint("divided image path ==> \(outputPath)")
 
 debugPrint("训练数据准备就绪，使用下面的命令开始训练自己的模型")
-debugPrint("python \(scriptPath)/trainer.py -i \(outputPath) -o \(workspace)/evil.mlmodel")
+debugPrint("python \(scriptPath)/trainer.py -i \(outputPath) -o \(workspace)/evil.mlmodel -l \(labels.joined())")

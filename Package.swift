@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Evil",
     dependencies: [
-        .package(url: "https://github.com/evilgix/Preprocessing", from: "1.0.5")
+        .package(url: "https://github.com/evilgix/Preprocessing", from: "1.0.7")
     ],
     targets: [
         .target(

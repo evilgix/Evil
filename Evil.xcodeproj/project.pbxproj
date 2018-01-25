@@ -7,52 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_32 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_38 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Package.swift */; };
-		OBJ_44 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* main.swift */; };
-		OBJ_46 /* DividerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Evil::DividerKit::Product" /* DividerKit.framework */; };
-		OBJ_47 /* Preprocessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Preprocessing::Preprocessing::Product" /* Preprocessing.framework */; };
-		OBJ_57 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* main.swift */; };
-		OBJ_59 /* DividerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Evil::DividerKit::Product" /* DividerKit.framework */; };
-		OBJ_60 /* Preprocessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Preprocessing::Preprocessing::Product" /* Preprocessing.framework */; };
-		OBJ_67 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Divider.swift */; };
-		OBJ_68 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Error.swift */; };
-		OBJ_70 /* Preprocessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Preprocessing::Preprocessing::Product" /* Preprocessing.framework */; };
-		OBJ_76 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* AdaptiveThresholdFilter.swift */; };
-		OBJ_77 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Processor.swift */; };
-		OBJ_78 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* SmoothThresholdFilter.swift */; };
+		OBJ_36 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_42 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Package.swift */; };
+		OBJ_48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* main.swift */; };
+		OBJ_50 /* DividerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Evil::DividerKit::Product" /* DividerKit.framework */; };
+		OBJ_51 /* Preprocessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Preprocessing::Preprocessing::Product" /* Preprocessing.framework */; };
+		OBJ_61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* main.swift */; };
+		OBJ_63 /* DividerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Evil::DividerKit::Product" /* DividerKit.framework */; };
+		OBJ_64 /* Preprocessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Preprocessing::Preprocessing::Product" /* Preprocessing.framework */; };
+		OBJ_71 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Divider.swift */; };
+		OBJ_72 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Error.swift */; };
+		OBJ_74 /* Preprocessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Preprocessing::Preprocessing::Product" /* Preprocessing.framework */; };
+		OBJ_80 /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* AdaptiveThresholdFilter.swift */; };
+		OBJ_81 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Error.swift */; };
+		OBJ_82 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* NSImage.swift */; };
+		OBJ_83 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Processor.swift */; };
+		OBJ_84 /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* SmoothThresholdFilter.swift */; };
+		OBJ_85 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* UIImage.swift */; };
+		OBJ_86 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A2AA47B2014B6D20047D5B0 /* PBXContainerItemProxy */ = {
+		0A7FD183201879A20065C09A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Evil::DividerKit";
 			remoteInfo = DividerKit;
 		};
-		0A2AA47C2014B6D20047D5B0 /* PBXContainerItemProxy */ = {
+		0A7FD184201879A20065C09A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Preprocessing::Preprocessing";
 			remoteInfo = Preprocessing;
 		};
-		0A2AA47D2014B6D20047D5B0 /* PBXContainerItemProxy */ = {
+		0A7FD185201879A20065C09A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Preprocessing::Preprocessing";
 			remoteInfo = Preprocessing;
 		};
-		0A2AA47E2014B6D20047D5B0 /* PBXContainerItemProxy */ = {
+		0A7FD186201879A20065C09A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Evil::DividerKit";
 			remoteInfo = DividerKit;
 		};
-		0A2AA47F2014B6D20047D5B0 /* PBXContainerItemProxy */ = {
+		0A7FD187201879A20065C09A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -70,41 +74,45 @@
 		OBJ_14 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_18 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/Kevin/develop/evil/Evil/.build/checkouts/Preprocessing-2913329733860734396/Package.swift"; sourceTree = "<group>"; };
 		OBJ_19 /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
-		OBJ_20 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
-		OBJ_21 /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothThresholdFilter.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_21 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		OBJ_23 /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothThresholdFilter.swift; sourceTree = "<group>"; };
+		OBJ_24 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		"Preprocessing::Preprocessing::Product" /* Preprocessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Preprocessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_45 /* Frameworks */ = {
+		OBJ_49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_46 /* DividerKit.framework in Frameworks */,
-				OBJ_47 /* Preprocessing.framework in Frameworks */,
+				OBJ_50 /* DividerKit.framework in Frameworks */,
+				OBJ_51 /* Preprocessing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_58 /* Frameworks */ = {
+		OBJ_62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_59 /* DividerKit.framework in Frameworks */,
-				OBJ_60 /* Preprocessing.framework in Frameworks */,
+				OBJ_63 /* DividerKit.framework in Frameworks */,
+				OBJ_64 /* Preprocessing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_69 /* Frameworks */ = {
+		OBJ_73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_70 /* Preprocessing.framework in Frameworks */,
+				OBJ_74 /* Preprocessing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_79 /* Frameworks */ = {
+		OBJ_87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
@@ -142,24 +150,28 @@
 		OBJ_16 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* Preprocessing 1.0.4 */,
+				OBJ_17 /* Preprocessing 1.0.7 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_17 /* Preprocessing 1.0.4 */ = {
+		OBJ_17 /* Preprocessing 1.0.7 */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_18 /* Package.swift */,
 				OBJ_19 /* AdaptiveThresholdFilter.swift */,
-				OBJ_20 /* Processor.swift */,
-				OBJ_21 /* SmoothThresholdFilter.swift */,
+				OBJ_20 /* Error.swift */,
+				OBJ_21 /* NSImage.swift */,
+				OBJ_22 /* Processor.swift */,
+				OBJ_23 /* SmoothThresholdFilter.swift */,
+				OBJ_24 /* UIImage.swift */,
+				OBJ_25 /* Utils.swift */,
 			);
-			name = "Preprocessing 1.0.4";
+			name = "Preprocessing 1.0.7";
 			path = ".build/checkouts/Preprocessing-2913329733860734396/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_22 /* Products */ = {
+		OBJ_26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"Evil::Divider::Product" /* Divider */,
@@ -177,7 +189,7 @@
 				OBJ_7 /* Sources */,
 				OBJ_15 /* Tests */,
 				OBJ_16 /* Dependencies */,
-				OBJ_22 /* Products */,
+				OBJ_26 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -207,16 +219,16 @@
 /* Begin PBXNativeTarget section */
 		"Evil::Divider" /* Divider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_40 /* Build configuration list for PBXNativeTarget "Divider" */;
+			buildConfigurationList = OBJ_44 /* Build configuration list for PBXNativeTarget "Divider" */;
 			buildPhases = (
-				OBJ_43 /* Sources */,
-				OBJ_45 /* Frameworks */,
+				OBJ_47 /* Sources */,
+				OBJ_49 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_48 /* PBXTargetDependency */,
-				OBJ_50 /* PBXTargetDependency */,
+				OBJ_52 /* PBXTargetDependency */,
+				OBJ_54 /* PBXTargetDependency */,
 			);
 			name = Divider;
 			productName = Divider;
@@ -225,15 +237,15 @@
 		};
 		"Evil::DividerKit" /* DividerKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "DividerKit" */;
+			buildConfigurationList = OBJ_67 /* Build configuration list for PBXNativeTarget "DividerKit" */;
 			buildPhases = (
-				OBJ_66 /* Sources */,
-				OBJ_69 /* Frameworks */,
+				OBJ_70 /* Sources */,
+				OBJ_73 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_71 /* PBXTargetDependency */,
+				OBJ_75 /* PBXTargetDependency */,
 			);
 			name = DividerKit;
 			productName = DividerKit;
@@ -242,16 +254,16 @@
 		};
 		"Evil::Evil" /* Evil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "Evil" */;
+			buildConfigurationList = OBJ_57 /* Build configuration list for PBXNativeTarget "Evil" */;
 			buildPhases = (
-				OBJ_56 /* Sources */,
-				OBJ_58 /* Frameworks */,
+				OBJ_60 /* Sources */,
+				OBJ_62 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_61 /* PBXTargetDependency */,
-				OBJ_62 /* PBXTargetDependency */,
+				OBJ_65 /* PBXTargetDependency */,
+				OBJ_66 /* PBXTargetDependency */,
 			);
 			name = Evil;
 			productName = Evil;
@@ -260,9 +272,9 @@
 		};
 		"Evil::SwiftPMPackageDescription" /* EvilPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_28 /* Build configuration list for PBXNativeTarget "EvilPackageDescription" */;
+			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "EvilPackageDescription" */;
 			buildPhases = (
-				OBJ_31 /* Sources */,
+				OBJ_35 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -274,10 +286,10 @@
 		};
 		"Preprocessing::Preprocessing" /* Preprocessing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "Preprocessing" */;
+			buildConfigurationList = OBJ_76 /* Build configuration list for PBXNativeTarget "Preprocessing" */;
 			buildPhases = (
-				OBJ_75 /* Sources */,
-				OBJ_79 /* Frameworks */,
+				OBJ_79 /* Sources */,
+				OBJ_87 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,9 +302,9 @@
 		};
 		"Preprocessing::SwiftPMPackageDescription" /* PreprocessingPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "PreprocessingPackageDescription" */;
+			buildConfigurationList = OBJ_38 /* Build configuration list for PBXNativeTarget "PreprocessingPackageDescription" */;
 			buildPhases = (
-				OBJ_37 /* Sources */,
+				OBJ_41 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -318,7 +330,7 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_22 /* Products */;
+			productRefGroup = OBJ_26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -333,97 +345,92 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_31 /* Sources */ = {
+		OBJ_35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_32 /* Package.swift in Sources */,
+				OBJ_36 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_37 /* Sources */ = {
+		OBJ_41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_38 /* Package.swift in Sources */,
+				OBJ_42 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_43 /* Sources */ = {
+		OBJ_47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_44 /* main.swift in Sources */,
+				OBJ_48 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_56 /* Sources */ = {
+		OBJ_60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_57 /* main.swift in Sources */,
+				OBJ_61 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_66 /* Sources */ = {
+		OBJ_70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_67 /* Divider.swift in Sources */,
-				OBJ_68 /* Error.swift in Sources */,
+				OBJ_71 /* Divider.swift in Sources */,
+				OBJ_72 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_75 /* Sources */ = {
+		OBJ_79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_76 /* AdaptiveThresholdFilter.swift in Sources */,
-				OBJ_77 /* Processor.swift in Sources */,
-				OBJ_78 /* SmoothThresholdFilter.swift in Sources */,
+				OBJ_80 /* AdaptiveThresholdFilter.swift in Sources */,
+				OBJ_81 /* Error.swift in Sources */,
+				OBJ_82 /* NSImage.swift in Sources */,
+				OBJ_83 /* Processor.swift in Sources */,
+				OBJ_84 /* SmoothThresholdFilter.swift in Sources */,
+				OBJ_85 /* UIImage.swift in Sources */,
+				OBJ_86 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_48 /* PBXTargetDependency */ = {
+		OBJ_52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Evil::DividerKit" /* DividerKit */;
-			targetProxy = 0A2AA47B2014B6D20047D5B0 /* PBXContainerItemProxy */;
+			targetProxy = 0A7FD186201879A20065C09A /* PBXContainerItemProxy */;
 		};
-		OBJ_50 /* PBXTargetDependency */ = {
+		OBJ_54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Preprocessing::Preprocessing" /* Preprocessing */;
-			targetProxy = 0A2AA47D2014B6D20047D5B0 /* PBXContainerItemProxy */;
+			targetProxy = 0A7FD187201879A20065C09A /* PBXContainerItemProxy */;
 		};
-		OBJ_61 /* PBXTargetDependency */ = {
+		OBJ_65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Evil::DividerKit" /* DividerKit */;
-			targetProxy = 0A2AA47E2014B6D20047D5B0 /* PBXContainerItemProxy */;
+			targetProxy = 0A7FD183201879A20065C09A /* PBXContainerItemProxy */;
 		};
-		OBJ_62 /* PBXTargetDependency */ = {
+		OBJ_66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Preprocessing::Preprocessing" /* Preprocessing */;
-			targetProxy = 0A2AA47F2014B6D20047D5B0 /* PBXContainerItemProxy */;
+			targetProxy = 0A7FD185201879A20065C09A /* PBXContainerItemProxy */;
 		};
-		OBJ_71 /* PBXTargetDependency */ = {
+		OBJ_75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Preprocessing::Preprocessing" /* Preprocessing */;
-			targetProxy = 0A2AA47C2014B6D20047D5B0 /* PBXContainerItemProxy */;
+			targetProxy = 0A7FD184201879A20065C09A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,16 +453,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_35 /* Debug */ = {
+		OBJ_33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -464,7 +462,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_36 /* Release */ = {
+		OBJ_34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -472,6 +470,15 @@
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
+		};
+		OBJ_39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -493,7 +500,16 @@
 			};
 			name = Release;
 		};
-		OBJ_41 /* Debug */ = {
+		OBJ_40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -513,7 +529,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_42 /* Release */ = {
+		OBJ_46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -533,7 +549,7 @@
 			};
 			name = Release;
 		};
-		OBJ_54 /* Debug */ = {
+		OBJ_58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -553,7 +569,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_55 /* Release */ = {
+		OBJ_59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -573,7 +589,7 @@
 			};
 			name = Release;
 		};
-		OBJ_64 /* Debug */ = {
+		OBJ_68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -596,7 +612,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_65 /* Release */ = {
+		OBJ_69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -619,7 +635,7 @@
 			};
 			name = Release;
 		};
-		OBJ_73 /* Debug */ = {
+		OBJ_77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -642,7 +658,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_74 /* Release */ = {
+		OBJ_78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -677,56 +693,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_28 /* Build configuration list for PBXNativeTarget "EvilPackageDescription" */ = {
+		OBJ_32 /* Build configuration list for PBXNativeTarget "EvilPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_29 /* Debug */,
-				OBJ_30 /* Release */,
+				OBJ_33 /* Debug */,
+				OBJ_34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_34 /* Build configuration list for PBXNativeTarget "PreprocessingPackageDescription" */ = {
+		OBJ_38 /* Build configuration list for PBXNativeTarget "PreprocessingPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_35 /* Debug */,
-				OBJ_36 /* Release */,
+				OBJ_39 /* Debug */,
+				OBJ_40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_40 /* Build configuration list for PBXNativeTarget "Divider" */ = {
+		OBJ_44 /* Build configuration list for PBXNativeTarget "Divider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_41 /* Debug */,
-				OBJ_42 /* Release */,
+				OBJ_45 /* Debug */,
+				OBJ_46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_53 /* Build configuration list for PBXNativeTarget "Evil" */ = {
+		OBJ_57 /* Build configuration list for PBXNativeTarget "Evil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_54 /* Debug */,
-				OBJ_55 /* Release */,
+				OBJ_58 /* Debug */,
+				OBJ_59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_63 /* Build configuration list for PBXNativeTarget "DividerKit" */ = {
+		OBJ_67 /* Build configuration list for PBXNativeTarget "DividerKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_64 /* Debug */,
-				OBJ_65 /* Release */,
+				OBJ_68 /* Debug */,
+				OBJ_69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_72 /* Build configuration list for PBXNativeTarget "Preprocessing" */ = {
+		OBJ_76 /* Build configuration list for PBXNativeTarget "Preprocessing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_73 /* Debug */,
-				OBJ_74 /* Release */,
+				OBJ_77 /* Debug */,
+				OBJ_78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
