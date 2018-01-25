@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.summary      = "Optical Character Recognition for iOS macOS. Use Vision framework."
   s.homepage     = "https://github.com/evilgix/Evil"
   s.license      = "MIT"
-  s.author             = { "gix" => "aoxianglele@icloud.com" }
+  s.author       = { "gix" => "aoxianglele@icloud.com" }
   # Or just: s.author    = "gix"
   # s.authors            = { "gix" => "aoxianglele@icloud.com" }
   # s.social_media_url   = "http://twitter.com/gix"
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:evilgix/Evil.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/evilgix/Evil.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
