@@ -44,8 +44,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var previewView: PreviewView!
+
+    lazy var evil = try? Evil(recognizer: .chineseIDCard)
     
-    lazy var recognizer = ChineseIDCardRecognizer.`default`
     lazy var session = AVCaptureSession()
     lazy var rectangleRequest: VNDetectRectanglesRequest = {
        let request =  VNDetectRectanglesRequest()
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
     }
 
     @IBAction func chooseImage(sender: UIBarButtonItem) {
@@ -171,7 +173,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         
         tipLabel.text = "recoginzing..."
         DispatchQueue.global(qos: .utility).async {
-            let cardNumber = self.recognizer?.do(image)
+            let cardNumber = self.evil?.recognize(image)
             DispatchQueue.main.async {
                 self.tipLabel.text = cardNumber ?? "recognize failed."
             }

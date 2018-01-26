@@ -37,23 +37,6 @@ public struct Configuration {
     }
 }
 
-/// 那些类型可以识别
-public protocol Recognizable {
-    var croppedMaxRetangle: CorpMaxRetangleResult { get }
-}
-
-extension CIImage: Recognizable {
-    public var croppedMaxRetangle: CorpMaxRetangleResult {
-        return preprocessor.croppedMaxRetangle()
-    }
-}
-
-extension CGImage: Recognizable {
-    public var croppedMaxRetangle: CorpMaxRetangleResult {
-        return preprocessor.croppedMaxRetangle()
-    }
-}
-
 /// 每一步的处理结果
 public protocol Valueable {
     associatedtype T

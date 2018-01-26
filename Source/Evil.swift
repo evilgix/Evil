@@ -12,65 +12,26 @@ import CoreML
 @available(OSX 10.13, iOS 11.0, *)
 public class Evil {
     
-    private static let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
-    private static let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0] as URL
-    
     let model: MLModel
+    let recognizer: Recognizer
     
-    static func modelURL(name: String) -> URL {
-        return documentURL.appendingPathComponent("evil/\(name)")
-    }
-    
-    public init(contentsOf url: URL) throws {
-        model = try MLModel(contentsOf: url)
-    }
-    
-    public convenience init(model name: String) throws {
-        try self.init(contentsOf: Evil.modelURL(name: name))
-    }
-    
-    public static func hasModel(name: String) -> Bool {
-        return (try? Evil(model: name)) != nil
-    }
-}
-
-// Download
-public extension Evil {
-    
-    /// 更新本地默认的模型文件
-    ///
-    /// - parameter source: 模型文件地址
-    /// - parameter force: 是否强制更新，默认为false
-    ///
-    public static func update(model name: String, source: URL, force: Bool = false) throws {
-        if !force && Evil.hasModel(name: name) {
-            return
+    public init(recognizer: Recognizer, autoUpdate: Bool = true) throws {
+        if autoUpdate {
+            if let m = (try? MLModel(contentsOf: recognizer.modelcURL)) {
+                model = m
+            } else {
+                try recognizer.dowloadAndUpdateModel()
+                model = try MLModel(contentsOf: recognizer.modelcURL)
+            }
+        } else {
+            model = try MLModel(contentsOf: recognizer.modelcURL)
         }
-        let data = try Data(contentsOf: source)
-        let cachedModel = Evil.cacheURL.appendingPathComponent(name)
-        try data.write(to: cachedModel)
-        try compile(model: name, source: cachedModel)
-        try FileManager.default.removeItem(at: cachedModel) // remove cache file
+        self.recognizer = recognizer
     }
-}
-
-// Compile
-public extension Evil {
     
-    /// 编译本地默认的模型文件
-    ///
-    /// - parameter source: 模型文件地址
-    ///
-    public static func compile(model name: String,  source: URL) throws {
-        let comiledURL = try MLModel.compileModel(at: source)
-        let modelURL = Evil.modelURL(name: name)
-        
-        try? FileManager.default.removeItem(at: modelURL) // if exits remove it.
-        let path = modelURL.deletingLastPathComponent()
-        try FileManager.default.createDirectory(at: path, withIntermediateDirectories: true)
-        try FileManager.default.moveItem(at: comiledURL, to: Evil.modelURL(name: name))
-        
-        debugPrint("[Evil] model \(name) compile succeed")
+    public convenience init(contentsOf url: URL, name: String, processor: Processor? = nil) throws {
+        try self.init(recognizer: Recognizer.custom(name: name, model: url, needComplie: false, processor: processor),
+                      autoUpdate: false)
     }
 }
 
