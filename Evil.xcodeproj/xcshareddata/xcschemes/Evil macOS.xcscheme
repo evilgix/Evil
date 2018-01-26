@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A80B8062019BCA300350373"
-               BuildableName = "Evil_macOS.framework"
+               BuildableName = "Evil.framework"
                BlueprintName = "Evil macOS"
                ReferencedContainer = "container:Evil.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A80B8062019BCA300350373"
-            BuildableName = "Evil_macOS.framework"
+            BuildableName = "Evil.framework"
             BlueprintName = "Evil macOS"
             ReferencedContainer = "container:Evil.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A80B8062019BCA300350373"
-            BuildableName = "Evil_macOS.framework"
+            BuildableName = "Evil.framework"
             BlueprintName = "Evil macOS"
             ReferencedContainer = "container:Evil.xcodeproj">
          </BuildableReference>

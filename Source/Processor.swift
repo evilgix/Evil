@@ -86,6 +86,7 @@ public typealias DivideResult = Result<[Value]>
 public typealias CorpMaxRetangleResult = Result<Value>
 public typealias FaceCorrectionResult = Result<Value>
 public typealias ProcessedResult = Result<Value>
+public typealias PerspectiveCorrectionResult = Result<Value>
 
 // 处理器
 public protocol Preprocessable { }
@@ -203,24 +204,12 @@ public extension Preprocessor where T: CGImage {
         }
         
         let ciImage = CIImage(cgImage: image)
-        let size = ciImage.extent.size
-        let boundingBox = maxObservation.boundingBox.scaled(to: size)
-        if ciImage.extent.contains(boundingBox) {
-            // Rectify the detected image and reduce it to inverted grayscale for applying model.
-            let topLeft = maxObservation.topLeft.scaled(to: size)
-            let topRight = maxObservation.topRight.scaled(to: size)
-            let bottomLeft = maxObservation.bottomLeft.scaled(to: size)
-            let bottomRight = maxObservation.bottomRight.scaled(to: size)
-            let outputImage = ciImage.cropped(to: boundingBox)
-                .applyingFilter("CIPerspectiveCorrection", parameters: [
-                    "inputTopLeft": CIVector(cgPoint: topLeft),
-                    "inputTopRight": CIVector(cgPoint: topRight),
-                    "inputBottomLeft": CIVector(cgPoint: bottomLeft),
-                    "inputBottomRight": CIVector(cgPoint: bottomRight)
-                    ])
-            return .success(Value(outputImage, boundingBox))
-        }
-        return .failure(.notFound)
+        
+        return ciImage.preprocessor.perspectiveCorrection(boundingBox: maxObservation.boundingBox,
+                                                          topLeft: maxObservation.topLeft,
+                                                          topRight: maxObservation.topRight,
+                                                          bottomLeft: maxObservation.bottomLeft,
+                                                          bottomRight: maxObservation.bottomRight)
     }
     
     
@@ -363,5 +352,26 @@ public extension Preprocessor where T: CIImage {
         let bounds = faceFeature.bounds.applying(image.orientationTransform(for: orientation))
         
         return .success(Value(image.oriented(orientation), bounds))
+    }
+    
+    public func perspectiveCorrection(boundingBox box: CGRect, topLeft: CGPoint, topRight: CGPoint, bottomLeft: CGPoint, bottomRight: CGPoint) -> PerspectiveCorrectionResult {
+        let size = image.extent.size
+        let boundingBox = box.scaled(to: size)
+        if image.extent.contains(boundingBox) {
+            // Rectify the detected image and reduce it to inverted grayscale for applying model.
+            let topLeft = topLeft.scaled(to: size)
+            let topRight = topRight.scaled(to: size)
+            let bottomLeft = bottomLeft.scaled(to: size)
+            let bottomRight = bottomRight.scaled(to: size)
+            let outputImage = image.cropped(to: boundingBox)
+                .applyingFilter("CIPerspectiveCorrection", parameters: [
+                    "inputTopLeft": CIVector(cgPoint: topLeft),
+                    "inputTopRight": CIVector(cgPoint: topRight),
+                    "inputBottomLeft": CIVector(cgPoint: bottomLeft),
+                    "inputBottomRight": CIVector(cgPoint: bottomRight)
+                    ])
+            return .success(Value(outputImage, boundingBox))
+        }
+        return .failure(.notFound)
     }
 }

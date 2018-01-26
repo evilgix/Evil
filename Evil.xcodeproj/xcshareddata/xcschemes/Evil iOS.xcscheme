@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A80CFD72019C21F00350373"
-               BuildableName = "Evil_iOS.framework"
+               BuildableName = "Evil.framework"
                BlueprintName = "Evil iOS"
                ReferencedContainer = "container:Evil.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A80CFD72019C21F00350373"
-            BuildableName = "Evil_iOS.framework"
+            BuildableName = "Evil.framework"
             BlueprintName = "Evil iOS"
             ReferencedContainer = "container:Evil.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A80CFD72019C21F00350373"
-            BuildableName = "Evil_iOS.framework"
+            BuildableName = "Evil.framework"
             BlueprintName = "Evil iOS"
             ReferencedContainer = "container:Evil.xcodeproj">
          </BuildableReference>
