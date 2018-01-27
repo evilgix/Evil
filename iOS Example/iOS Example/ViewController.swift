@@ -31,34 +31,31 @@ class PreviewView: UIView {
     }
 }
 
-class TagLayer: CALayer {
-    public convenience init(frame: CGRect) {
-        self.init()
-        self.frame = frame
-        self.borderColor = UIColor.red.withAlphaComponent(0.4).cgColor
-        self.borderWidth = 1
-    }
-}
-
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var previewView: PreviewView!
-
-    lazy var evil = try? Evil(recognizer: .chineseIDCard)
+    @IBOutlet weak var scanItem: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
     
+    var evil = try? Evil(recognizer: .chineseIDCard)
+    lazy var context = CIContext(mtlDevice: MTLCreateSystemDefaultDevice()!)
     lazy var session = AVCaptureSession()
     lazy var rectangleRequest: VNDetectRectanglesRequest = {
-       let request =  VNDetectRectanglesRequest()
+        let request =  VNDetectRectanglesRequest()
         request.maximumObservations = 1
         return request
     }()
     
+    lazy var operationQueue = OperationQueue()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        operationQueue.maxConcurrentOperationCount = 5
+        operationQueue.qualityOfService = .utility
     }
-
+    
     @IBAction func chooseImage(sender: UIBarButtonItem) {
         let vc = UIImagePickerController()
         vc.delegate = self
@@ -71,13 +68,16 @@ class ViewController: UIViewController {
         }
         
         if session.isRunning {
-            session.stopRunning()
-            sender.title = "Scan IDCard"
+            stopScan()
         } else {
             session.startRunning()
             sender.title = "Stop Scan"
         }
-        
+    }
+    
+    private func stopScan() {
+        session.stopRunning()
+        scanItem.title = "Scan IDCard"
     }
     
     private func setupPreView() {
@@ -89,16 +89,16 @@ class ViewController: UIViewController {
         let deviceInput = try! AVCaptureDeviceInput(device: captureDevice!)
         let deviceOutput = AVCaptureVideoDataOutput()
         deviceOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
-        deviceOutput.setSampleBufferDelegate(self, queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.default))
+        deviceOutput.setSampleBufferDelegate(self, queue: DispatchQueue.global(qos: .userInteractive))
         session.addInput(deviceInput)
         session.addOutput(deviceOutput)
         previewView.videoPreviewLayer.videoGravity = .resize
         previewView.session = session
     }
-    
 }
 
 extension UIDeviceOrientation {
+    
     var cgImagePropertyOrientation: CGImagePropertyOrientation {
         switch self {
         case .portrait:
@@ -117,7 +117,6 @@ extension UIDeviceOrientation {
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
         }
@@ -131,18 +130,40 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let orientation = UIDevice.current.orientation.cgImagePropertyOrientation
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: orientation, options: requestOptions)
         
-        do {
-            try imageRequestHandler.perform([rectangleRequest])
-        } catch {
-            fatalError(error.localizedDescription)
-        }
+        try? imageRequestHandler.perform([rectangleRequest])
         
         guard let observation = rectangleRequest.results?.first as? VNRectangleObservation else { return }
         
+        let op = BlockOperation { [weak self] in
+            guard let `self` = self else { return }
+            let ciimage = CIImage(cvPixelBuffer: pixelBuffer).oriented(orientation)
+            if let numbers = ciimage.preprocessor
+                .perspectiveCorrection(boundingBox: observation.boundingBox,
+                                       topLeft: observation.topLeft,
+                                       topRight: observation.topRight,
+                                       bottomLeft: observation.bottomLeft,
+                                       bottomRight: observation.bottomRight)
+                .mapValue({Value($0.image.oriented(orientation), $0.bounds)})
+                .correctionByFace()
+                .cropChineseIDCardNumberArea()
+                .process()
+                .divideText()
+                .value?.map({ $0.image }), numbers.count == 18 {
+                if let result = try? self.evil?.prediction(numbers) {
+                    if let cardnumber = result?.flatMap({ $0 }).joined() {
+                        self.operationQueue.cancelAllOperations()
+                        DispatchQueue.main.async {
+                            self.stopScan()
+                            self.tipLabel.text = cardnumber
+                        }
+                    }
+                }
+            }
+        }
+        op.queuePriority = .veryHigh
+        operationQueue.addOperation(op)
+        
         DispatchQueue.main.async {
-            CATransaction.begin()
-            CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
-            self.previewView.layer.sublayers?.filter { $0 is CAShapeLayer }.forEach { $0.removeFromSuperlayer() }
             let layer = CAShapeLayer()
             layer.frame = self.previewView.layer.frame
             let size = self.previewView.frame.size
@@ -153,12 +174,10 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             path.addLine(to: observation.topRight.scaled(to: size))
             path.addLine(to: observation.topLeft.scaled(to: size))
             layer.path = path.cgPath
-            layer.lineWidth = 2.0
             layer.opacity = 1.0
-            layer.fillColor = nil
-            layer.strokeColor = UIColor.red.cgColor
+            layer.fillColor = UIColor.red.withAlphaComponent(0.4).cgColor
+            self.previewView.layer.sublayers?.filter { $0 is CAShapeLayer }.forEach { $0.removeFromSuperlayer() }
             self.previewView.layer.addSublayer(layer)
-            CATransaction.commit()
         }
     }
 }
@@ -180,3 +199,4 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         }
     }
 }
+

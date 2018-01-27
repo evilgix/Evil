@@ -12,8 +12,8 @@
 		0A80CFA62019C18300350373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA42019C18300350373 /* Main.storyboard */; };
 		0A80CFA82019C18300350373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA72019C18300350373 /* Assets.xcassets */; };
 		0A80CFAB2019C18300350373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA92019C18300350373 /* LaunchScreen.storyboard */; };
-		0AEBF9ED2019D42400301CED /* Evil_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */; };
-		0AEBF9EE2019D42400301CED /* Evil_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AEBF9ED2019D42400301CED /* Evil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil.framework */; };
+		0AEBF9EE2019D42400301CED /* Evil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0AEBF9EE2019D42400301CED /* Evil_iOS.framework in Embed Frameworks */,
+				0AEBF9EE2019D42400301CED /* Evil.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEBF9ED2019D42400301CED /* Evil_iOS.framework in Frameworks */,
+				0AEBF9ED2019D42400301CED /* Evil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +117,8 @@
 		0A80CFB32019C1A000350373 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A80CFB82019C1A000350373 /* Evil_macOS.framework */,
-				0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */,
+				0AEBF9EC2019D41C00301CED /* Evil.framework */,
+				0A80CFB82019C1A000350373 /* Evil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,17 +187,17 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0A80CFB82019C1A000350373 /* Evil_macOS.framework */ = {
+		0A80CFB82019C1A000350373 /* Evil.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil_macOS.framework;
+			path = Evil.framework;
 			remoteRef = 0A80CFB72019C1A000350373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0AEBF9EC2019D41C00301CED /* Evil_iOS.framework */ = {
+		0AEBF9EC2019D41C00301CED /* Evil.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Evil_iOS.framework;
+			path = Evil.framework;
 			remoteRef = 0AEBF9EB2019D41C00301CED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
