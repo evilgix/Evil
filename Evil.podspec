@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Evil"
-  s.version      = "0.9.1"
+  s.version      = "0.9.2"
   s.summary      = "Optical Character Recognition for iOS macOS. Use Vision framework."
   s.homepage     = "https://github.com/evilgix/Evil"
   s.license      = "MIT"

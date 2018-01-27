@@ -10,9 +10,9 @@
 		0A80B86A2019C05A00350373 /* DividerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8682019C05A00350373 /* DividerError.swift */; };
 		0A80B86B2019C05A00350373 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80B8692019C05A00350373 /* Divider.swift */; };
 		0A80CF932019C0D800350373 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80CF922019C0D800350373 /* main.swift */; };
+		0AAE591F201C88D9005ECB07 /* Preprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE591E201C88D9005ECB07 /* Preprocessor.swift */; };
 		0AEBF9FC2019D78E00301CED /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FA2019D78E00301CED /* AdaptiveThresholdFilter.swift */; };
 		0AEBF9FD2019D78E00301CED /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FB2019D78E00301CED /* SmoothThresholdFilter.swift */; };
-		0AEBFA022019D79D00301CED /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FE2019D79D00301CED /* Processor.swift */; };
 		0AEBFA032019D79D00301CED /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBF9FF2019D79D00301CED /* Error.swift */; };
 		0AEBFA042019D79D00301CED /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBFA002019D79D00301CED /* NSImage.swift */; };
 		0AEBFA052019D79D00301CED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBFA012019D79D00301CED /* Utils.swift */; };
@@ -98,10 +98,10 @@
 		0A80CFED2019C3E700350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
 		0A80CFF62019C3EB00350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
 		0A80CFFF2019C3F700350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0AAE591E201C88D9005ECB07 /* Preprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preprocessor.swift; path = ../../Source/Preprocessor.swift; sourceTree = "<group>"; };
 		0AE224452019C40700AA8866 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
 		0AEBF9FA2019D78E00301CED /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveThresholdFilter.swift; path = ../../Source/AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
 		0AEBF9FB2019D78E00301CED /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmoothThresholdFilter.swift; path = ../../Source/SmoothThresholdFilter.swift; sourceTree = "<group>"; };
-		0AEBF9FE2019D79D00301CED /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Processor.swift; path = ../../Source/Processor.swift; sourceTree = "<group>"; };
 		0AEBF9FF2019D79D00301CED /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../Source/Error.swift; sourceTree = "<group>"; };
 		0AEBFA002019D79D00301CED /* NSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSImage.swift; path = ../../Source/NSImage.swift; sourceTree = "<group>"; };
 		0AEBFA012019D79D00301CED /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../Source/Utils.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		0AE224542019C42000AA8866 /* Preprocessor */ = {
 			isa = PBXGroup;
 			children = (
-				0AEBF9FE2019D79D00301CED /* Processor.swift */,
+				0AAE591E201C88D9005ECB07 /* Preprocessor.swift */,
 				0AEBF9FF2019D79D00301CED /* Error.swift */,
 				0AEBFA002019D79D00301CED /* NSImage.swift */,
 				0AEBFA012019D79D00301CED /* Utils.swift */,
@@ -366,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEBFA022019D79D00301CED /* Processor.swift in Sources */,
+				0AAE591F201C88D9005ECB07 /* Preprocessor.swift in Sources */,
 				0A80B86B2019C05A00350373 /* Divider.swift in Sources */,
 				0AEBFA052019D79D00301CED /* Utils.swift in Sources */,
 				0AEBF9FC2019D78E00301CED /* AdaptiveThresholdFilter.swift in Sources */,
