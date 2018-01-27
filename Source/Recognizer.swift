@@ -142,14 +142,20 @@ public extension Valueable where T == Value {
         guard let image = value?.image else {
             return .failure(.notFound)
         }
+        return .success(image.cropChineseIDCardNumberArea())
+    }
+}
+
+public extension CIImage {
+    public func cropChineseIDCardNumberArea() -> Value {
         // 截取 数字区
         // 按照真实比例截取，身份证号码区
-        let x = image.extent.width * 0.33
-        let y = image.extent.height * 0
-        let w = image.extent.width * 0.63
-        let h = image.extent.height * 0.25
+        let x = extent.width * 0.33
+        let y = extent.height * 0
+        let w = extent.width * 0.63
+        let h = extent.height * 0.25
         let rect = CGRect(x: x, y: y, width: w, height: h)
-        return .success(Value(image.cropped(to: rect).transformed(by: CGAffineTransform(translationX: -x, y: -y)), rect))
+        return Value(cropped(to: rect).transformed(by: CGAffineTransform(translationX: -x, y: -y)), rect)
     }
 }
 

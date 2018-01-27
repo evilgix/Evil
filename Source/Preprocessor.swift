@@ -181,7 +181,7 @@ public extension Preprocessor where T: CIImage {
     ///
     /// - parameter result: resize分割后单个字的size
     /// - parameter adjustment: 是否对调整分割后的图片
-     /// - parameter debugger: 返回每一步的处理结果
+    /// - parameter debugger: 返回每一步的处理结果
     ///
     /// - returns: 返回分割结果
     ///
@@ -208,12 +208,17 @@ public extension Preprocessor where T: CIImage {
                 let rect = c.boundingBox.scaled(to: ciImage.extent.size)
                 
                 var image = ciImage.cropped(to: rect)
-                                   .transformed(by: CGAffineTransform(translationX: -rect.origin.x, y: -rect.origin.y))
+                    .transformed(by: CGAffineTransform(translationX: -rect.origin.x, y: -rect.origin.y))
                 if let size = resize {
                     // 将文字切割出来 缩放到`size`
                     image = image.resize(size)
                 }
-                
+                //                if adjustment {
+                //                    image = SmoothThresholdFilter(image, inputEdgeO: 0.15, inputEdge1: 0.9).outputImage ?? image
+                //                    debugger?(image)
+                //                    image = AdaptiveThresholdFilter(image).outputImage ?? image
+                //                    debugger?(image)
+                //                }
                 debugger?(image)
                 results.append(Value(image, rect))
             }
@@ -226,7 +231,7 @@ public extension Preprocessor where T: CIImage {
     ///
     ///
     public func croppedMaxRectangle() -> CorpMaxRectangleResult {
-
+        
         let request = VNDetectRectanglesRequest()
         let handler = VNImageRequestHandler(ciImage: image, options: [:])
         
@@ -247,12 +252,12 @@ public extension Preprocessor where T: CIImage {
         }
         
         return image.preprocessor.perspectiveCorrection(boundingBox: maxObservation.boundingBox,
-                                                          topLeft: maxObservation.topLeft,
-                                                          topRight: maxObservation.topRight,
-                                                          bottomLeft: maxObservation.bottomLeft,
-                                                          bottomRight: maxObservation.bottomRight)
+                                                        topLeft: maxObservation.topLeft,
+                                                        topRight: maxObservation.topRight,
+                                                        bottomLeft: maxObservation.bottomLeft,
+                                                        bottomRight: maxObservation.bottomRight)
     }
-
+    
     /// 根据脸部信息矫正图片，确认脸部正面向上👆
     ///
     ///
@@ -276,7 +281,7 @@ public extension Preprocessor where T: CIImage {
                         orientation = .left
                     }
                 }
-            }            
+            }
         } else if orientation == .up && faceFeatures.count == 0 {
             orientation = .down
             faceFeatures = detector.features(in: image, options: [CIDetectorImageOrientation: orientation.rawValue])
@@ -326,3 +331,4 @@ public extension Preprocessor where T: CIImage {
         return .failure(.notFound)
     }
 }
+
