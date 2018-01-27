@@ -53,43 +53,15 @@ import UIKit
     
     @available(iOS 11.0, *)
     public extension Preprocessor where T: UIImage {
-        
+
         public var ciImage: CIImage? {
             return CIImage(image: image)?.oriented(image.imageOrientation.cgImagePropertyOrientation)
-        }
-        
-        public func process(conf: Configuration = Configuration.`default`, debugger: Debugger? = nil) -> ProcessedResult {
-            guard let ciImage = ciImage else {
-                return .failure(.abort("can't get ciImage"))
-            }
-            return ciImage.preprocessor.process(conf: conf, debugger: debugger)
-        }
-        
-        public func divideText(result resize: CGSize? = nil, adjustment: Bool = false, debugger: Debugger? = nil) -> DivideResult {
-            guard let cgImage = image.cgImage else {
-                return .failure(.abort("can't get cgimage"))
-            }
-            return cgImage.preprocessor.divideText(result: resize, adjustment: adjustment, debugger: debugger)
-        }
-        
-        public func croppedMaxRetangle() -> CorpMaxRetangleResult {
-            guard let cgImage = image.cgImage else {
-                return .failure(.abort("can't get cgimage"))
-            }
-            return cgImage.preprocessor.croppedMaxRetangle()
-        }
-        
-        public func correctionByFace() -> FaceCorrectionResult {
-            guard let ciImage = ciImage else {
-                return .failure(.abort("can't get ciImage"))
-            }
-            return ciImage.preprocessor.correctionByFace()
         }
     }
     
     extension UIImage: Recognizable {
-        public var croppedMaxRetangle: CorpMaxRetangleResult {
-            return preprocessor.croppedMaxRetangle()
+        public var croppedMaxRectangle: CorpMaxRectangleResult {
+            return preprocessor.ciImage?.preprocessor.croppedMaxRectangle() ?? .failure(.notFound)
         }
     }
         

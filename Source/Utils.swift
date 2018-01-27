@@ -8,6 +8,7 @@
 
 import CoreGraphics
 import CoreVideo
+import CoreImage
 
 public extension CGRect {
     public func scaled(to size: CGSize) -> CGRect {
@@ -30,6 +31,23 @@ public extension CGPoint {
     }
 }
 
+public extension CIImage {
+    
+    public func resize(_ size: CGSize) -> CIImage {
+        var outputImage = self
+        if extent.width > size.width || extent.height > size.height {
+            if extent.width > extent.height {
+                outputImage = outputImage.applyingFilter("CILanczosScaleTransform",
+                                                  parameters: [kCIInputScaleKey: size.width / extent.width])
+            } else {
+                outputImage = outputImage.applyingFilter("CILanczosScaleTransform",
+                                                  parameters: [kCIInputScaleKey: size.height / extent.height])
+            }
+        }
+        return outputImage
+    }
+}
+
 public extension CGImage {
     
     public func pixelBuffer(_ colorspace: CGColorSpace = CGColorSpaceCreateDeviceRGB()) -> CVPixelBuffer? {
@@ -49,7 +67,6 @@ public extension CGImage {
 }
 
 #if os(iOS)
-    import CoreImage
     import UIKit
     public func draw(retangle bounds: CGRect, on image: CIImage) -> CIImage? {
         

@@ -37,36 +37,17 @@ public class Evil {
 
 public extension Evil {
     
-    static func convert(images: [CIImage]) -> [CGImage] {
-        var context: CIContext
-        if let device = MTLCreateSystemDefaultDevice() {
-            context = CIContext(mtlDevice: device)
-        } else {
-            context = CIContext()
-        }
-        return images.flatMap { context.createCGImage($0, from: $0.extent) }
-    }
-    
-    /// ocr 识别图片数组
-    ///
-    /// - parameter ciimages: 将要识别的图片数组
-    ///
-    public func prediction(ciimages: [CIImage]) throws -> [String?] {
-        return try prediction(images: Evil.convert(images: ciimages))
-    }
-    
     /// ocr 识别图片数组
     ///
     /// - parameter images: 将要识别的图片数组
     ///
-    public func prediction(images: [CGImage]) throws -> [String?] {
+    public func prediction(_ images: [CIImage]) throws -> [String?] {
         let coreModel = try VNCoreMLModel(for: model)
         let request = VNCoreMLRequest(model: coreModel)
         request.imageCropAndScaleOption = .centerCrop
-        
+         let handler = VNSequenceRequestHandler()
         let result = try images.flatMap {
-            let handler = VNImageRequestHandler(cgImage: $0, options: [:])
-            try handler.perform([request])
+            try handler.perform([request], on: $0)
             return (request.results?.first as? VNClassificationObservation)?.identifier
         }
         return result

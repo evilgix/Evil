@@ -47,7 +47,7 @@ public struct Value {
     public let image: CIImage
     public let bounds: CGRect
     
-    init (_ image: CIImage, _ bounds: CGRect) {
+    public init (_ image: CIImage, _ bounds: CGRect) {
         self.image = image
         self.bounds = bounds
     }
@@ -63,10 +63,19 @@ public enum Result<T>: Valueable {
         }
         return nil
     }
+    
+    public func mapValue<U>(_ transform: (T) -> U) -> Result<U> {
+        switch self {
+        case .success(let t):
+            return .success(transform(t))
+        case .failure(let e):
+            return .failure(e)
+        }
+    }
 }
 
 public typealias DivideResult = Result<[Value]>
-public typealias CorpMaxRetangleResult = Result<Value>
+public typealias CorpMaxRectangleResult = Result<Value>
 public typealias FaceCorrectionResult = Result<Value>
 public typealias ProcessedResult = Result<Value>
 public typealias PerspectiveCorrectionResult = Result<Value>
@@ -78,6 +87,7 @@ public extension Preprocessable {
         return Preprocessor(self)
     }
 }
+
 public struct Preprocessor<T> {
     let image: T
     init(_ image: T) {
@@ -86,7 +96,14 @@ public struct Preprocessor<T> {
 }
 
 extension CIImage: Preprocessable {}
-extension CGImage: Preprocessable {}
+
+@available(OSX 10.13, iOS 11.0, *)
+extension CGImage: Preprocessable {
+    public var preprocessor: Preprocessor<CIImage> {
+        return CIImage(cgImage: self).preprocessor
+    }
+}
+
 extension Value: Preprocessable {
     public var preprocessor: Preprocessor<CIImage> {
         return image.preprocessor
@@ -104,100 +121,6 @@ public extension Valueable where T == Value {
     
     public func correctionByFace() -> FaceCorrectionResult {
         return value?.preprocessor.correctionByFace() ?? .failure(.notFound)
-    }
-}
-
-@available(OSX 10.13, iOS 11.0, *)
-public extension Preprocessor where T: CGImage {
-    
-    public func process(conf: Configuration = Configuration.`default`, debugger: Debugger? = nil) -> ProcessedResult {
-        return CIImage(cgImage: image).preprocessor.process(conf: conf, debugger: debugger)
-    }
-    
-    public func divideText(result resize: CGSize? = nil, adjustment: Bool = false, debugger: Debugger? = nil) -> DivideResult {
-        
-        let detectTextRequest = VNDetectTextRectanglesRequest()
-        detectTextRequest.reportCharacterBoxes = true
-        
-        let handler = VNImageRequestHandler(cgImage: image, options: [:])
-        try? handler.perform([detectTextRequest])
-        
-        guard let textObservations = detectTextRequest.results as? [VNTextObservation] else {
-            return .failure(.notFound)
-        }
-        
-        let ciImage = CIImage(cgImage: image)
-        var results = [Value]()
-        
-        for textObservation in textObservations {
-            guard let cs = textObservation.characterBoxes else { continue }
-            
-            for c in cs {
-                let imageWidth = CGFloat(ciImage.extent.width)
-                let imageHeight = CGFloat(ciImage.extent.height)
-                // 向周围多取2个点
-                let x = c.boundingBox.origin.x * imageWidth - 2
-                let y = c.boundingBox.origin.y * imageHeight - 2
-                let width = c.boundingBox.size.width * imageWidth + 4
-                let height = c.boundingBox.size.height * imageHeight + 4
-                
-                let rect = CGRect(x: x, y: y, width: width, height: height)
-                
-                var image = ciImage.cropped(to: rect)
-                if let size = resize {
-                    // 将文字切割出来 缩放到`size`
-                    image = image.applyingFilter("CILanczosScaleTransform",
-                                                 parameters: [kCIInputScaleKey: size.height / height,
-                                                              kCIInputAspectRatioKey: size.width / (width * size.height / height)])
-                }
-                
-                debugger?(image)
-//                if adjustment {
-//                    image = SmoothThresholdFilter(image, inputEdgeO: 0.15, inputEdge1: 0.9).outputImage ?? image
-//                    debugger?(image)
-//                    image = AdaptiveThresholdFilter(image).outputImage ?? image
-//                    debugger?(image)
-//                }
-                results.append(Value(image, rect))
-            }
-        }
-        
-        return .success(results)
-    }
-    
-    public func croppedMaxRetangle() -> CorpMaxRetangleResult {
-        
-        let request = VNDetectRectanglesRequest()
-        let handler = VNImageRequestHandler(cgImage: image, options: [:])
-        
-        do {
-            try handler.perform([request])
-        } catch (let error) {
-            return .failure(.inline(error))
-        }
-        
-        guard let observations = request.results as? [VNRectangleObservation] else {
-            return .failure(.notFound)
-        }
-        
-        guard let maxObservation = (observations.max(by: { (left, right) -> Bool in
-            return left.boundingBox.area > right.boundingBox.area
-        })) else {
-            return .failure(.notFound)
-        }
-        
-        let ciImage = CIImage(cgImage: image)
-        
-        return ciImage.preprocessor.perspectiveCorrection(boundingBox: maxObservation.boundingBox,
-                                                          topLeft: maxObservation.topLeft,
-                                                          topRight: maxObservation.topRight,
-                                                          bottomLeft: maxObservation.bottomLeft,
-                                                          bottomRight: maxObservation.bottomRight)
-    }
-    
-    
-    public func correctionByFace() -> FaceCorrectionResult {
-        return CIImage(cgImage: image).preprocessor.correctionByFace()
     }
 }
 
@@ -254,16 +177,6 @@ public extension Preprocessor where T: CIImage {
         return .success(Value(inputImage, inputImage.extent))
     }
     
-    var cgImage: CGImage? {
-        var context: CIContext
-        if let device = MTLCreateSystemDefaultDevice() {
-            context = CIContext(mtlDevice: device)
-        } else {
-            context = CIContext()
-        }
-        return context.createCGImage(image, from: image.extent)
-    }
-    
     /// 将一整个文字图片划分为单个的`字`
     ///
     /// - parameter result: resize分割后单个字的size
@@ -273,20 +186,71 @@ public extension Preprocessor where T: CIImage {
     /// - returns: 返回分割结果
     ///
     public func divideText(result resize: CGSize? = nil, adjustment: Bool = true, debugger: Debugger? = nil) -> DivideResult {
-        guard let cgImage = cgImage else {
-            return .failure(.abort("size is empty or too big, please double check your image extend. \(image.extent)"))
+        
+        let detectTextRequest = VNDetectTextRectanglesRequest()
+        detectTextRequest.reportCharacterBoxes = true
+        
+        let handler = VNImageRequestHandler(ciImage: image, options: [:])
+        try? handler.perform([detectTextRequest])
+        
+        guard let textObservations = detectTextRequest.results as? [VNTextObservation] else {
+            return .failure(.notFound)
         }
-        return cgImage.preprocessor.divideText(result: resize, adjustment: adjustment, debugger: debugger)
+        
+        let ciImage = self.image
+        var results = [Value]()
+        
+        for textObservation in textObservations {
+            guard let cs = textObservation.characterBoxes else { continue }
+            
+            for c in cs {
+                
+                let rect = c.boundingBox.scaled(to: ciImage.extent.size)
+                
+                var image = ciImage.cropped(to: rect)
+                                   .transformed(by: CGAffineTransform(translationX: -rect.origin.x, y: -rect.origin.y))
+                if let size = resize {
+                    // 将文字切割出来 缩放到`size`
+                    image = image.resize(size)
+                }
+                
+                debugger?(image)
+                results.append(Value(image, rect))
+            }
+        }
+        
+        return .success(results)
     }
     
     /// 将图片中最大的矩形切割出来
     ///
     ///
-    public func croppedMaxRetangle() -> CorpMaxRetangleResult {
-        guard let cgImage = cgImage else {
-            return .failure(.abort("size is empty or too big, please double check your image extend. \(image.extent)"))
+    public func croppedMaxRectangle() -> CorpMaxRectangleResult {
+
+        let request = VNDetectRectanglesRequest()
+        let handler = VNImageRequestHandler(ciImage: image, options: [:])
+        
+        do {
+            try handler.perform([request])
+        } catch (let error) {
+            return .failure(.inline(error))
         }
-        return cgImage.preprocessor.croppedMaxRetangle()
+        
+        guard let observations = request.results as? [VNRectangleObservation] else {
+            return .failure(.notFound)
+        }
+        
+        guard let maxObservation = (observations.max(by: { (left, right) -> Bool in
+            return left.boundingBox.area > right.boundingBox.area
+        })) else {
+            return .failure(.notFound)
+        }
+        
+        return image.preprocessor.perspectiveCorrection(boundingBox: maxObservation.boundingBox,
+                                                          topLeft: maxObservation.topLeft,
+                                                          topRight: maxObservation.topRight,
+                                                          bottomLeft: maxObservation.bottomLeft,
+                                                          bottomRight: maxObservation.bottomRight)
     }
 
     /// 根据脸部信息矫正图片，确认脸部正面向上👆
@@ -294,7 +258,7 @@ public extension Preprocessor where T: CIImage {
     ///
     public func correctionByFace() -> FaceCorrectionResult {
         
-        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyLow])!
         
         var orientation: CGImagePropertyOrientation = image.extent.width > image.extent.height ? .up : .right
         
@@ -313,6 +277,9 @@ public extension Preprocessor where T: CIImage {
                     }
                 }
             }            
+        } else if orientation == .up && faceFeatures.count == 0 {
+            orientation = .down
+            faceFeatures = detector.features(in: image, options: [CIDetectorImageOrientation: orientation.rawValue])
         }
         
         guard var faceFeature = faceFeatures.first as? CIFaceFeature,
@@ -338,6 +305,7 @@ public extension Preprocessor where T: CIImage {
     }
     
     public func perspectiveCorrection(boundingBox box: CGRect, topLeft: CGPoint, topRight: CGPoint, bottomLeft: CGPoint, bottomRight: CGPoint) -> PerspectiveCorrectionResult {
+        
         let size = image.extent.size
         let boundingBox = box.scaled(to: size)
         if image.extent.contains(boundingBox) {

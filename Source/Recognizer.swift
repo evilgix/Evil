@@ -13,18 +13,12 @@ import CoreML
 
 /// 那些类型可以识别
 public protocol Recognizable {
-    var croppedMaxRetangle: CorpMaxRetangleResult { get }
+    var croppedMaxRectangle: CorpMaxRectangleResult { get }
 }
 
 extension CIImage: Recognizable {
-    public var croppedMaxRetangle: CorpMaxRetangleResult {
-        return preprocessor.croppedMaxRetangle()
-    }
-}
-
-extension CGImage: Recognizable {
-    public var croppedMaxRetangle: CorpMaxRetangleResult {
-        return preprocessor.croppedMaxRetangle()
+    public var croppedMaxRectangle: CorpMaxRectangleResult {
+        return preprocessor.croppedMaxRectangle()
     }
 }
 
@@ -91,19 +85,11 @@ public enum Recognizer {
         }
     }
     
-    // 处理身份证相关
     func cropChineseIDCardNumberArea(_ object: Recognizable) -> CIImage? {
-        if let image = object.croppedMaxRetangle.correctionByFace().process().value?.image {
-            // 截取 数字区
-            // 按照真实比例截取，身份证号码区
-            let x = image.extent.width * 0.33
-            let y = image.extent.height * 0
-            let w = image.extent.width * 0.63
-            let h = image.extent.height * 0.25
-            let rect = CGRect(x: x, y: y, width: w, height: h)
-            return image.cropped(to: rect)
-        }
-        return nil
+        return object.croppedMaxRectangle
+            .correctionByFace()
+            .cropChineseIDCardNumberArea()
+            .process().value?.image
     }
     
     ///   从默认的地址下载深度学习模型，并更新
@@ -145,8 +131,25 @@ extension Evil {
     
     public func recognize(_ object: Recognizable, placeholder: String = "?") -> String? {
         if let images = recognizer.processor?(object)?.preprocessor.divideText().value?.map({ $0.image }) {
-            return try? prediction(ciimages: images).map { $0 ?? placeholder }.joined()
+            return try? prediction(images).map { $0 ?? placeholder }.joined()
         }
         return nil
     }
 }
+
+public extension Valueable where T == Value {
+    public func cropChineseIDCardNumberArea() -> Result<Value> {
+        guard let image = value?.image else {
+            return .failure(.notFound)
+        }
+        // 截取 数字区
+        // 按照真实比例截取，身份证号码区
+        let x = image.extent.width * 0.33
+        let y = image.extent.height * 0
+        let w = image.extent.width * 0.63
+        let h = image.extent.height * 0.25
+        let rect = CGRect(x: x, y: y, width: w, height: h)
+        return .success(Value(image.cropped(to: rect).transformed(by: CGAffineTransform(translationX: -x, y: -y)), rect))
+    }
+}
+
