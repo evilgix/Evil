@@ -12,6 +12,7 @@
 		0A80CFA62019C18300350373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA42019C18300350373 /* Main.storyboard */; };
 		0A80CFA82019C18300350373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA72019C18300350373 /* Assets.xcassets */; };
 		0A80CFAB2019C18300350373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A80CFA92019C18300350373 /* LaunchScreen.storyboard */; };
+		0AAE5915201C7270005ECB07 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE5914201C7270005ECB07 /* DebugViewController.swift */; };
 		0AEBF9ED2019D42400301CED /* Evil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil.framework */; };
 		0AEBF9EE2019D42400301CED /* Evil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEBF9EC2019D41C00301CED /* Evil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		0A80CFAA2019C18300350373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A80CFAC2019C18300350373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A80CFB22019C1A000350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0AAE5914201C7270005ECB07 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				0A80CFA02019C18300350373 /* AppDelegate.swift */,
 				0A80CFA22019C18300350373 /* ViewController.swift */,
+				0AAE5914201C7270005ECB07 /* DebugViewController.swift */,
 				0A80CFA42019C18300350373 /* Main.storyboard */,
 				0A80CFA72019C18300350373 /* Assets.xcassets */,
 				0A80CFA92019C18300350373 /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAE5915201C7270005ECB07 /* DebugViewController.swift in Sources */,
 				0A80CFA32019C18300350373 /* ViewController.swift in Sources */,
 				0A80CFA12019C18300350373 /* AppDelegate.swift in Sources */,
 			);
