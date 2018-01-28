@@ -2,7 +2,7 @@
 //  Recognizer.swift
 //  Evil iOS
 //
-//  Created by GongXiang on 1/26/18.
+//  Created by Gix on 1/26/18.
 //  Copyright © 2018 Gix. All rights reserved.
 //
 
@@ -79,13 +79,13 @@ public enum Recognizer {
     var processor: Processor? {
         switch self {
         case .chineseIDCard:
-            return cropChineseIDCardNumberArea
+            return Recognizer.cropChineseIDCardNumberArea
         case .custom(_, _, _, let processor):
             return processor
         }
     }
     
-    func cropChineseIDCardNumberArea(_ object: Recognizable) -> CIImage? {
+    public static func cropChineseIDCardNumberArea(_ object: Recognizable) -> CIImage? {
         return object.croppedMaxRectangle
             .correctionByFace()
             .cropChineseIDCardNumberArea()

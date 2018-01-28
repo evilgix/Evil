@@ -2,7 +2,7 @@
 //  Error.swift
 //  DividerPackageDescription
 //
-//  Created by GongXiang on 1/21/18.
+//  Created by Gix on 1/21/18.
 //
 
 import Foundation

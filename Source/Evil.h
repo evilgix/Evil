@@ -2,7 +2,7 @@
 //  Evil.h
 //  Evil
 //
-//  Created by GongXiang on 1/25/18.
+//  Created by Gix on 1/25/18.
 //  Copyright © 2018 Gix. All rights reserved.
 //
 

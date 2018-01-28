@@ -2,7 +2,7 @@
 //  Evil.swift
 //  Evil
 //
-//  Created by GongXiang on 1/20/18.
+//  Created by Gix on 1/20/18.
 //  Copyright © 2018 Gix. All rights reserved.
 //
 
