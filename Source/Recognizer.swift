@@ -29,13 +29,16 @@ public enum Recognizer {
     case chineseIDCard
     case custom(name: String, model: URL, needComplie: Bool, processor: Processor?) // local complied model url
     
-    static var modelBaseURL: URL = {
+    static func modelBaseURL(_ name: String) -> URL {
        let info = Bundle.main.infoDictionary
-        guard let baseURL = info?["EvilModelBaseURL"] as? String else {
+        guard let baseURL = (info?["Evil"] as? [String: String])?[name] else {
             fatalError("please set `EvilModelBaseURL` in `info.plist`")
         }
-        return URL(string: baseURL)!
-    }()
+        guard let url = URL(string: baseURL) else {
+            fatalError("please double check \(name)'s download url: \(baseURL)")
+        }
+        return url
+    }
     
     static let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
     static let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0] as URL
@@ -61,7 +64,7 @@ public enum Recognizer {
         if case .custom(_, let url, let needComplie, _) = self {
             return needComplie ? url : nil
         }
-        return Recognizer.modelBaseURL.appendingPathComponent("\(name).mlmodel")
+        return Recognizer.modelBaseURL(name)
     }
     
     // 已经编译好的model 可以直接使用

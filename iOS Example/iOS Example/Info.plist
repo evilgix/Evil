@@ -20,8 +20,11 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>EvilModelBaseURL</key>
-	<string>http://ou5pk1mdu.bkt.clouddn.com</string>
+	<key>Evil</key>
+	<dict>
+		<key>ChineseIDCard</key>
+		<string>http://ou5pk1mdu.bkt.clouddn.com</string>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
