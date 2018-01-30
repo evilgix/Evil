@@ -1,3 +1,3 @@
 # Evil
 
-A description of this package.
+使用机器学习对身份证、银行卡、门牌号、车牌号等进行光学识别

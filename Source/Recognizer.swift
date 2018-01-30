@@ -47,7 +47,7 @@ public enum Recognizer {
         return true
     }
     
-    var name: String {
+    public var name: String {
         switch self {
         case .chineseIDCard:
             return "ChineseIDCard"
