@@ -62,4 +62,13 @@ print(result)
 ```
 
 ## 训练模型
-TODO
+参考Tools 目录下`PrepareBot`项目
+
+## 交流讨论
+	1.github issue (推荐)
+	2.qq 群：641256202
+
+## LICENSE
+	 MIT
+
+Copyright 2018 - 2019 Kevin.Gong aoxianglele#icloud.com
