@@ -1,10 +1,7 @@
 language: swift
 osx_image: xcode9.2'
-before_install: 
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - pwd
 script:
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil macOS' -sdk macosx10.13 | xcpretty
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'PrepareBot' -sdk macosx10.13 | xcpretty
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil iOS' -sdk iphoneos11.2 | xcpretty
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'iOS Example' -sdk iphoneos11.2 | xcpretty
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil macOS' -sdk macosx10.13
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'PrepareBot' -sdk macosx10.13
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil iOS' -sdk iphoneos11.2
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'iOS Example' -sdk iphoneos11.2
