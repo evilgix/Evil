@@ -1,4 +1,18 @@
-# Evil
+---
+
+<p align="center">
+  <img src=".images/logo.png" height="140" />
+  <h3 align="center">Evil</h3>
+  <p align="center">OCR(`Optical Character Recognition`) in Swift for iOS&macOS.</p>
+  <p align="center">
+    <a href="https://travis-ci.org/evilgix/Evil.svg?branch=master"><img src="https://travis-ci.org/evilgix/Evil.svg?branch=master"></a>
+  </p>
+</p>
+
+---
+
+
+[![Build Status](https://travis-ci.org/evilgix/Evil.svg?branch=master)](https://travis-ci.org/evilgix/Evil)
 
 银行卡、身份证、门牌号光学识别  
 OCR(`Optical Character Recognition`) in Swift for iOS&macOS.
