@@ -2,7 +2,7 @@ language: swift
 os: osx
 osx_image: xcode9.2
 script:
-  - xcodebuild -scheme 'Evil macOS' -workspace Evil.xcworkspace -sdk macosx10.13 build
-  - xcodebuild -scheme 'PrepareBot' -workspace Evil.xcworkspace -sdk macosx10.13 build
-  - xcodebuild -scheme 'Evil iOS' -workspace Evil.xcworkspace -sdk iphoneos11.2 build
-  - xcodebuild -scheme 'iOS Example' -workspace Evil.xcworkspace -sdk iphoneos11.2 build
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil macOS' -sdk macosx10.13
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'PrepareBot' -sdk macosx10.13
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil iOS' -sdk iphoneos11.2
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'iOS Example' -sdk iphoneos11.2
