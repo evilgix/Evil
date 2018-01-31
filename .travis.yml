@@ -1,8 +1,9 @@
 language: swift
 os: osx
-osx_image: xcode9.2
+osx_image: xcode9.2'
+before_install: cd evilgix/Evil
 script:
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil macOS' -sdk macosx10.13
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'PrepareBot' -sdk macosx10.13
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil iOS' -sdk iphoneos11.2
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'iOS Example' -sdk iphoneos11.2
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil macOS' -sdk macosx10.13 | xcpretty
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'PrepareBot' -sdk macosx10.13 | xcpretty
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil iOS' -sdk iphoneos11.2 | xcpretty
+  - xcodebuild build -workspace Evil.xcworkspace -scheme 'iOS Example' -sdk iphoneos11.2 | xcpretty
