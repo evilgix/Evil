@@ -100,6 +100,7 @@
 		0A80CFFF2019C3F700350373 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
 		0AAE591E201C88D9005ECB07 /* Preprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preprocessor.swift; path = ../../Source/Preprocessor.swift; sourceTree = "<group>"; };
 		0AE224452019C40700AA8866 /* Evil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Evil.xcodeproj; path = ../Evil.xcodeproj; sourceTree = "<group>"; };
+		0AEB046920215FF00043A125 /* trainer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = trainer.py; path = Scripts/trainer.py; sourceTree = "<group>"; };
 		0AEBF9FA2019D78E00301CED /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveThresholdFilter.swift; path = ../../Source/AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
 		0AEBF9FB2019D78E00301CED /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmoothThresholdFilter.swift; path = ../../Source/SmoothThresholdFilter.swift; sourceTree = "<group>"; };
 		0AEBF9FF2019D79D00301CED /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../Source/Error.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		0A80CF902019C0A900350373 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				0AEB046920215FF00043A125 /* trainer.py */,
 				0A80CF912019C0BC00350373 /* generator.py */,
 			);
 			name = Scripts;
