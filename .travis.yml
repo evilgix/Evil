@@ -1,7 +1,42 @@
 language: swift
+os: osx
 osx_image: xcode9.2
+branches:
+  only:
+    - master
+env:
+  global:
+  - WORKSPACE=Evil.xcworkspace
+  - IOS_FRAMEWORK_SCHEME="Evil iOS"
+  - MACOS_FRAMEWORK_SCHEME="Evil macOS"
+  - EXAMPLE_SCHEME="iOS Example"
+  - TOOLS_SCHEME="PrepareBot"
+  matrix:
+  - DESTINATION="OS=11.1,name=iPhone X" SCHEME="$IOS_FRAMEWORK_SCHEME"   BUILD_TOOLS="NO"   BUILD_EXAMPLE="YES" POD_LINT="YES"
+  - DESTINATION="arch=x86_64"           SCHEME="$MACOS_FRAMEWORK_SCHEME" BUILD_TOOLS="YES"  BUILD_EXAMPLE="NO"  POD_LINT="NO"
+  
+before_install:
+  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 script:
-  - xcodebuild build -workspace 'Evil.xcworkspace' -scheme 'Evil macOS' -sdk macosx10.13
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'PrepareBot' -sdk macosx10.13
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'Evil iOS' -sdk iphoneos11.2
-  - xcodebuild build -workspace Evil.xcworkspace -scheme 'iOS Example' -sdk iphoneos11.2
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+ 
+  # Debug
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  # Release
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  
+    # Build Example in Debug if specified
+  - if [ $BUILD_EXAMPLE == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+    
+  - if [ $BUILD_TOOLS == "YES"]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$TOOLS_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+    
+  # Run `pod lib lint` if specified
+  - if [ $POD_LINT == "YES" ]; then
+      pod lib lint;
+    fi
