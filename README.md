@@ -13,8 +13,7 @@
 </p>
 
 
-银行卡、身份证、门牌号光学识别  
-OCR(`Optical Character Recognition`) in Swift for iOS&macOS.
+---
 
 ![debug image](.images/evil-debug.png)
 
