@@ -1,18 +1,17 @@
----
 
 <p align="center">
   <img src=".images/logo.png" height="140" />
   <h3 align="center">Evil</h3>
-  <p align="center">OCR(`Optical Character Recognition`) in Swift for iOS&macOS.</p>
+  <p align="center">Optical Character Recognition in Swift for iOS&macOS.</p>
   <p align="center">
-    <a href="https://travis-ci.org/evilgix/Evil.svg?branch=master"><img src="https://travis-ci.org/evilgix/Evil.svg?branch=master"></a>
+  	<a href="https://github.com/evilgix/Evil"><img src="https://travis-ci.org/evilgix/Evil.svg?branch=master"></a>
+	<a href="https://github.com/evilgix/Evil"><img src="https://img.shields.io/cocoapods/v/Evil.svg"></a>
+    	<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+  	<a href="https://github.com/evilgix/Evil"><img src="https://img.shields.io/cocoapods/p/Evil.svg?style=flat"></a>
+	<a href="https://github.com/evilgix/Evil"><img src="https://img.shields.io/badge/qq群-641256202-ff6964.svg"></a>
   </p>
 </p>
 
----
-
-
-[![Build Status](https://travis-ci.org/evilgix/Evil.svg?branch=master)](https://travis-ci.org/evilgix/Evil)
 
 银行卡、身份证、门牌号光学识别  
 OCR(`Optical Character Recognition`) in Swift for iOS&macOS.
