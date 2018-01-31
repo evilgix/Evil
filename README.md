@@ -5,6 +5,8 @@ OCR(`Optical Character Recognition`) in Swift for iOS&macOS.
 
 ![debug image](.images/evil-debug.png)
 
+图片来自于网络，侵删
+
 ##  Requirements
 
  - iOS 11.0+ / macOS 10.13+
