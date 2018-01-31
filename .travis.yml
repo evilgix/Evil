@@ -1,0 +1,9 @@
+language: swift
+os: osx
+osx_image: xcode9.2
+xcode_workspace: Evil.xcworkspace
+xcode_scheme: 
+  - Evil macOS
+  - Evil iOS
+  - PrepareBot
+  - iOS Example
