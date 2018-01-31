@@ -33,7 +33,7 @@ script:
     fi
     
   - if [ $BUILD_TOOLS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$TOOLS_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$TOOLS_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty;
     fi
     
   # Run `pod lib lint` if specified
