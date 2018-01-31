@@ -36,7 +36,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var previewView: PreviewView!
     @IBOutlet weak var scanItem: UIBarButtonItem!
-    @IBOutlet weak var imageView: UIImageView!
     
     var evil = try? Evil(recognizer: .chineseIDCard)
     lazy var context = CIContext(mtlDevice: MTLCreateSystemDefaultDevice()!)

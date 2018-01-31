@@ -207,7 +207,7 @@ public extension Preprocessor where T: CIImage {
                 
                 let rect = c.boundingBox.scaled(to: ciImage.extent.size)
                 
-                var image = ciImage.cropped(to: rect)
+                var image = ciImage.cropped(to: CGRect(x: rect.origin.x - 3, y: rect.origin.y - 3, width: rect.width + 6, height: rect.height + 6))
                     .transformed(by: CGAffineTransform(translationX: -rect.origin.x, y: -rect.origin.y))
                 if let size = resize {
                     // 将文字切割出来 缩放到`size`
