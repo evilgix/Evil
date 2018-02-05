@@ -76,7 +76,8 @@ print(result)
 ```
 
 ## 训练模型
-参考Tools 目录下`PrepareBot`项目
+参考Tools 目录下`PrepareBot`项目  
+参考博文[掘金](https://juejin.im/post/5a76ada6f265da4e9d220727)
 
 ## 交流讨论
 	1.github issue (推荐)
