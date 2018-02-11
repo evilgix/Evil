@@ -1,6 +1,6 @@
 //
 //  AdaptiveThresholdFilter.swift
-//  Preprocessing
+//  Evil
 //
 //  Created by Gix on 1/18/18.
 //  Copyright © 2018 Gix. All rights reserved.

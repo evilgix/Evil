@@ -45,7 +45,7 @@ public extension Evil {
         let coreModel = try VNCoreMLModel(for: model)
         let request = VNCoreMLRequest(model: coreModel)
         request.imageCropAndScaleOption = .centerCrop
-         let handler = VNSequenceRequestHandler()
+        let handler = VNSequenceRequestHandler()
         let result = try images.flatMap {
             try handler.perform([request], on: $0)
             return (request.results?.first as? VNClassificationObservation)?.identifier

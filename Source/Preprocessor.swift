@@ -1,6 +1,6 @@
 //
 //  Processor.swift
-//  Preprocessing
+//  Evil
 //
 //  Created by Gix on 1/18/18.
 //  Copyright © 2018 Gix. All rights reserved.
@@ -12,7 +12,7 @@ import Vision
 /// debugger 输出每一步的处理结果
 public typealias Debugger = (CIImage) -> ()
 
-/// 配置与处理器
+/// 配置预处理器
 public struct Configuration {
     
     public static var `default`: Configuration { return Configuration() }
@@ -309,6 +309,7 @@ public extension Preprocessor where T: CIImage {
         return .success(Value(image.oriented(orientation), bounds))
     }
     
+    // 矩形透视矫正
     public func perspectiveCorrection(boundingBox box: CGRect, topLeft: CGPoint, topRight: CGPoint, bottomLeft: CGPoint, bottomRight: CGPoint) -> PerspectiveCorrectionResult {
         
         let size = image.extent.size
